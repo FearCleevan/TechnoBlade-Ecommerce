@@ -1,0 +1,800 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* -- Header Section CSS -- */
+.main-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    top: 0px;
+    border-bottom: 1px solid #d10023;
+}
+
+.logo img {
+    width: 220px;
+    margin-left: 100px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #d10023;
+    border-radius: 20px 0 0 20px;
+    width: 450px;
+}
+
+.search-button {
+    padding: 11px;
+    width: 100px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #d10023;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-button:hover {
+    background-color: #d32642;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 50px;
+    gap: 50px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-badge {
+    background-color: #d10023;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 16px;
+    margin-top: -18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.notification-badge:hover {
+    background-color: #d32642;
+}
+
+.fas {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.icon:hover {
+    color: #b6b6b6;
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 21px;
+    right: -70px;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-dropdown a {
+    float: none;
+    color: #000000;
+    font-size: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown a:hover {
+    background-color: #d10023;
+    color: #fff;
+}
+
+.icon-wrapper:hover .user-dropdown {
+    display: block;
+}
+
+.h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-header {
+    background-color: #f5f5f5;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-list li a.active {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#home-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#products-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#build-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#laptops-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#desktop-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+.desktop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 41%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 21%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.laptop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 61%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.desktop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.laptop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.desktop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+.laptop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown:hover .desktop-dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .laptop-dropdown-content {
+    display: block;
+}
+
+.submenu-wrapper {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 0;
+    background-color: #ffffff;
+    min-width: 280px;
+    z-index: 1;
+}
+
+.submenu-content a {
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.submenu-content-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px;
+    color: #d10023;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submenu-content a {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.submenu-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.submenu-wrapper:hover .submenu-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+/* -- Header Section CSS -- */
+
+/* BreadCrumb CSS */
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #acacac;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.breadcrumb a {
+    color: #414141;
+    text-decoration: none;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb span {
+    color: #3f3f3f;
+    margin: 0 5px;
+    font-weight: bold;
+}
+/* BreadCrumb CSS */
+
+/* CheckOut CSS */
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.checkout-left{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+.checkout-heading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-description {
+    flex-grow: 1;
+}
+
+.product-title-checkout span {
+    font-size: 13px;
+}
+
+.product-description p {
+    font-size: 12px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.product-price {
+    text-align: right;
+    font-size: 12px;
+}
+
+.order-total {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.subtotal-row, .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.subtotal-order p {
+    font-size: 12px;
+    color: #333;
+}
+
+.sub-total-order p {
+    font-size: 13px;
+    color: #333;
+}
+
+.total-order p {
+    font-size: 14px;
+    color: #181818;
+}
+
+.total-price p {
+    font-size: 122px;
+    color: #181818;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 10px 0;
+}
+
+.total-price p {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+.checkout-right {
+    width: 48%;
+    height: auto; /* Change to auto for dynamic height */
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.section-title {
+    color: #444; /* Slightly lighter color for section titles */
+    margin-top: 20px;
+}
+.account-info, .shipping-info, .shipping-method-info, .payment-method-info {
+    margin-bottom: 15px;
+}
+.checkout-dropdown {
+    width: 200px;
+    margin-bottom: 15px;
+}
+.different-address-input, 
+.different-address-input + select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* You may also want to target the dropdown specifically */
+#different-address-form select {
+    width: calc(100% - 20px); /* Adjusts the dropdown width */
+}
+.pay-button {
+    background-color: #28a745; /* Green background for button */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.pay-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+.hidden {
+    display: none;
+}
+/* CheckOut CSS */
+
+/* Footer Section CSS */
+.footer-main {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+    margin-top: 200px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #bbb;
+    transition: color 0.3s;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-social-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.social-media ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    margin-right: 15px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.3s;
+}
+
+.social-media ul li a:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #ffffff;
+    color: #464646;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin-left: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    color: #303030;
+    margin-right: 10px;
+    transition: color 0.3s;
+    margin-right: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a:hover {
+    color: #d00;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container,
+    .footer-social-newsletter,
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-links a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+/* Footer Section CSS */
+
+/* Container for the forms */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+/* Tabs for switching between Login and Register */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs button.active {
+    border-bottom: 2px solid #d10023;
+    color: #d10023;
+    font-weight: 600;
+}
+
+.tabs button:hover {
+    background-color: #ffffff;
+}
+
+/* Form Content */
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Adds space between the input fields */ /* Adds space below each row */
+}
+
+.form-row input,
+.form-row select {
+    flex: 1; /* Makes the fields the same width */
+}
+
+/* Form styling */
+h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center     ;
+    text-align: center;
+}
+
+.note {
+    margin-bottom: 20px;
+}
+
+.accept-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.name-card {
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.icon-container {
+    margin-bottom: 10px;
+}
+
+.form-content input, .form-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.newsletter-label {
+    font-size: 12px;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+a {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d10023;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d32642;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+/* Login / Registration CSS */

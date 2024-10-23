@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK OUT</title>
+    <link rel="icon" href="./1x/Asset 2.png" type="image/png">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<div>
+
+    <!-- Header Section -->
+    <header class="main-header-container">
+        <div class="header">
+            <div class="logo">
+                <img src="./1x/Final-Logo-2.png" alt="">
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button type="submit" class="search-button">SEARCH</button>
+            </form>
+            <div class="icons">
+                <div class="icon-wrapper">
+                    <div class="notification-badge">3</div>
+                    <a href="trackyourorder.html"><i class="fas fa-truck icon" title="Track Your Order"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="notification-badge">5</div>
+                    <a href="Cart.html"><i class="fas fa-shopping-cart icon" title="Cart"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-user icon" title="User"></i>
+                    <i class="fas fa-caret-down icon"></i>
+
+                    <div class="user-dropdown">
+                        <a href="#">Log In / Sign Out</a>
+                        <a href="#">Purchase History</a>
+                        <a href="#">Account Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-header">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-hover"><a href="index.html" id="home-link">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="products-link">PRODUCTS</a>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Component <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        COMPONENT
+                                    </div>
+                                    <a href="./chassis.html">Chassis Fan</a>
+                                    <a href="./cpu.html">CPU Cooling</a>
+                                    <a href="./graphics.html">Graphics Card</a>
+                                    <a href="./ssd.html">Hard Disk Drive</a>
+                                    <a href="./ssd.html">Solid State Drive</a>
+                                    <a href="./ram.html">Ram</a>
+                                    <a href="./motherboard.html">Motherboard</a>
+                                    <a href="./pccase.html">PC Case</a>
+                                    <a href="./psu.html">Power Supply</a>
+                                    <a href="./intel.html">Processor AMD</a>
+                                    <a href="#">Processor Intel</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Peripherals <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PERIPHERALS
+                                    </div>
+                                    <a href="desktop-section.html">Headset</a>
+                                    <a href="#">Keyboard</a>
+                                    <a href="#">Mouse</a>
+                                    <a href="#">Monitor</a>
+                                    <a href="#">UPS & AVR</a>
+                                    <a href="#">Mouse Pad</a>
+                                    <a href="#">Web & Digital Camera</a>
+                                    <a href="#">Printer & Scanner</a>
+                                    <a href="#">Speaker</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Accessories <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        ACCESSORIES
+                                    </div>
+                                    <a href="desktop-section.html">Cables</a>
+                                    <a href="#">Earphones</a>
+                                    <a href="#">Power Bank</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">PC Furnitures <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PC FURNITURES
+                                    </div>
+                                    <a href="desktop-section.html">Gaming Chairs</a>
+                                    <a href="#">Office Chairs</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Lights & LED</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">OS & Softwares <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        OS & SOFTWARES
+                                    </div>
+                                    <a href="desktop-section.html">Antivirus</a>
+                                    <a href="#">Office Applications</a>
+                                    <a href="#">Operating System</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./desktop-section.html" id="desktop-link">DESKTOP</a>
+                        <div id="dropdown-content" class="desktop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Desktop <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        DESKTOP
+                                    </div>
+                                    <a href="./desktop-section.html">Gaming Build</a>
+                                    <a href="#">Productivity Build</a>
+                                    <a href="#">Home Use Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./laptop-section.html" id="laptops-link">LAPTOP</a>
+                        <div id="dropdown-content" class="laptop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Laptops<i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        LAPTOPS
+                                    </div>
+                                    <a href="./laptop-section.html">Gaming Laptops</a>
+                                    <a href="#">Productivity Laptops</a>
+                                    <a href="#">Chromebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="buildpc.html" id="build-link">BUILD A PC</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section -->
+
+    <!-- Bread Crumb Section -->
+    <div class="breadcrumb">
+        <a href="#">HOME</a>
+        <span>&gt;</span>
+        <a href="#">SHOPPING CART</a>
+        <span>&gt;</span>
+        <a href="#">CHECK OUT</a>
+    </div>
+    <!-- Bread Crumb Section -->
+
+    <!-- Check Out Section -->
+    <div class="checkout-container">
+        <div class="checkout-left">
+            <h2 class="checkout-heading">Order Summary</h2>
+
+            <!-- Container where cart items will be displayed -->
+            <div class="order-summary-items"></div>
+
+            <div class="order-summary">
+                <div class="order-total">
+                    <div class="subtotal-row">
+                        <div class="subtotal-order">
+                            <p>Sub-Total:</p>
+                        </div>
+                        <div class="sub-total-order">
+                            <p id="checkout-subtotal">&#8369;0.00</p>
+                        </div>
+                    </div>
+
+                    <hr class="divider">
+
+                    <div class="total-row">
+                        <div class="total-order">
+                            <p>Total:</p>
+                        </div>
+                        <div class="total-price">
+                            <p id="checkout-total">&#8369;0.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Retrieve the cart items from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Get the container where order summary items will be displayed
+            const orderSummaryItemsContainer = document.querySelector('.order-summary-items');
+
+            // Initialize subtotal
+            let subtotal = 0;
+
+            // Loop through cart items and display each item
+            if (cartItems.length > 0) {
+                cartItems.forEach(item => {
+                    // Calculate subtotal for each item
+                    subtotal += item.price;
+
+                    // Create the HTML for each cart item
+                    const orderSummaryItemHTML = `
+                        <div class="product-details">
+                            <img src="${item.imageSrc}" alt="${item.title}" class="product-image">
+                            <div class="product-description">
+                                <div class="product-title-checkout">
+                                    <span><strong>${item.title}</strong></span>
+                                </div>
+                                <p>Item Price: <strong>&#8369;${item.price.toLocaleString()}</strong></p>
+                            </div>
+                            <div class="product-price">
+                                <p><strong>QTY: 1</strong></p>
+                                <p><strong>&#8369;${item.price.toLocaleString()}</strong></p>
+                            </div>
+                        </div>
+                    `;
+                    // Append the item to the container
+                    orderSummaryItemsContainer.innerHTML += orderSummaryItemHTML;
+                });
+
+                // Update the subtotal and total amounts
+                document.getElementById('checkout-subtotal').textContent = `₱${subtotal.toLocaleString()}`;
+                document.getElementById('checkout-total').textContent = `₱${subtotal.toLocaleString()}`;
+            } else {
+                // If the cart is empty, display a message
+                orderSummaryItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            }
+        </script>
+
+
+        <div class="checkout-right">
+            <h2 class="checkout-heading">Choose Payment Option</h2>
+            <div class="form-container">
+                <!-- Tabs for switching between Login, Register, and Change Password -->
+                <div class="tabs">
+                    <button id="login-tab" class="active" onclick="showLogin()">COD</button>
+                    <button id="register-tab" onclick="showRegister()">Debit / Credit Cards</button>
+                    <button id="change-password-tab" onclick="showChangePassword()">PayPal</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="login-form" class="form-content active">
+                    <h3 class="welcome">You Choose Cash on Delivery</h3>
+                    <form id="loginForm">
+                        <!-- First Name and Last Name -->
+                        <div class="form-row">
+                            <input type="text" id="fname" name="fname" required placeholder="First Name..."
+                                value="Peter Paul">
+                            <input type="text" id="lname" name="lname" required placeholder="Last Name..."
+                                value="Lazan">
+                        </div>
+
+                        <input type="email" id="e-email" name="e-email" required placeholder="Email Address..."
+                            value="jonathan.mauring17@gmail.com">
+
+                        <!-- City and ZIP Code -->
+                        <div class="form-row">
+                            <select title="cod-city" id="cod-city" name="cod-city" required>
+                                <option value="" disabled selected>Select a City...</option>
+                                <option value="city1" selected>Davao City</option>
+                                <option value="city2">City 2</option>
+                                <option value="city3">City 3</option>
+                            </select>
+
+                            <input type="text" id="cod-zip-code" name="cod-zip-code" required placeholder="ZIP Code...">
+                        </div>
+
+                        <select title="cod-state" id="cod-state-province" name="cod-state_province" required>
+                            <option value="" disabled selected>Select a State / Province...</option>
+                            <option value="city1" selected>Davao Del Sur</option>
+                            <option value="city2">City 2</option>
+                            <option value="city3">City 3</option>
+                        </select>
+
+                        <div class="form-row">
+                            <input type="text" id="cod-address" name="cod-address" required placeholder="Address..."
+                                value="Matina Aplaya, Davao City">
+                            <input type="text" id="cod-street-address" name="cod-street-address" required
+                                placeholder="Street, House no. Village..." value="Del Carmen Village">
+                        </div>
+
+                        <input type="text" id="phone-number" name="phone-number" required placeholder="Phone Number...">
+
+                        <!-- Note -->
+                        <p class="note">
+                            By choosing the COD payment option, only amounts between ₱1,000 and ₱10,000 can be paid via
+                            Cash on Delivery to avoid the risk of non-payment.
+                        </p>
+
+                        <!-- Validation -->
+                        <p class="note" id="cod-restriction" style="color: red; display: none;">
+                            For orders above ₱10,000, please select Debit/Credit or Paypal as your payment option.
+                        </p>
+
+                        <button type="submit" class="btn" id="complete-order-order">Complete Order</button>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div id="register-form" class="form-content">
+                    <h3 class="welcome">You Choose Debit / Credit Cards</h3>
+                    <form id="loginForms">
+                        <!-- Card Section -->
+                        <label for="fname" class="accept-label">Accepted Cards</label>
+                        <div class="icon-container">
+                            <i class="fa fa-cc-visa" style="color:navy; font-size: 40px;"></i>
+                            <i class="fa fa-cc-mastercard" style="color:red; font-size: 40px;"></i>
+                            <img src="./product-images/path_to_bpi_logo.png" alt="BPI"
+                                style="width: 70px; height: auto; margin-left: 3px;">
+                            <img src="./product-images/path_to_bdo_logo.png" alt="BDO"
+                                style="width: 70px; height: auto; margin-left: 3px; margin-bottom: 5px;">
+                        </div>
+
+                        <!-- Card Details -->
+                        <label for="name" class="name-card">Name on Card</label>
+                        <input title="Name on Card" type="text" name="name" id="name" placeholder="John Smith" required>
+
+                        <label for="card-number" class="card-number">Card Number</label>
+                        <input title="Card Number" type="text" name="card-number" id="card-number"
+                            placeholder="1111-2222-3333-4444" required>
+
+                        <div class="form-row">
+                            <div class="label-first">
+                                <label for="exp-monthdate" class="name-card">Exp Month and Date</label>
+                                <input title="expiry date" type="date" name="exp-monthdate" id="exp-monthdate" required>
+                            </div>
+                            <div class="label-second">
+                                <label for="cvv" class="name-card">CVV</label>
+                                <input title="cvv" type="text" name="cvv" id="cvv" placeholder="352" required>
+                            </div>
+                        </div>
+
+                        <!-- Billing Address -->
+                        <h3 class="welcome">Billing Address</h3>
+                        <div class="form-row">
+                            <input type="text" id="first-name" name="first_name" required placeholder="First Name...">
+                            <input type="text" id="last-name" name="last-name" required placeholder="Last Name...">
+                        </div>
+                        <input type="email" id="register-email" name="email" required placeholder="Email Address...">
+
+                        <div class="form-row">
+                            <select title="city" id="city" name="city" required>
+                                <option value="" disabled selected>Select a City...</option>
+                                <option value="city1" selected>Davao City</option>
+                                <option value="city2">Digos City</option>
+                                <option value="city3">Tagum City</option>
+                            </select>
+                            <input type="text" id="zip-code" name="zip-code" required placeholder="ZIP Code...">
+                        </div>
+
+                        <select title="state" id="state-province" name="state_province" required>
+                            <option value="" disabled selected>Select a State / Province...</option>
+                            <option value="city1" selected>Davao Del Sur</option>
+                            <option value="city2">Davao Del Norte</option>
+                            <option value="city3">Davao Occidental</option>
+                        </select>
+
+                        <div class="form-row">
+                            <input type="text" id="address" name="address" required placeholder="Address..." required>
+                            <input type="text" id="street-address" name="street-address" required
+                                placeholder="Street, House no. Village...">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn" id="complete-order">Complete Order</button>
+                    </form>
+                </div>
+
+                <!-- Modal HTML -->
+                <div id="orderTrackingModal" class="modal" style="display:none;">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h3>Your Order Has Been Placed!</h3>
+                        <p>Your Tracking Number is:</p>
+                        <input type="text" id="trackingNumber" readonly value="ORD-123456"
+                            style="width: 50%; padding: 5px; margin-bottom: 20px;">
+                        <div class="button-container">
+                            <button id="copyTracking" class="btn">Copy</button>
+                            <button id="okButton" class="btn">OK</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal CSS -->
+                <style>
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        z-index: 1000;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+
+                    .modal-content {
+                        background-color: #fff;
+                        margin: 10% auto;
+                        padding: 20px;
+                        border: 1px solid #888;
+                        width: 80%;
+                        max-width: 400px;
+                        text-align: center;
+                    }
+
+                    .close-modal {
+                        float: right;
+                        font-size: 28px;
+                        cursor: pointer;
+                    }
+
+                    .button-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        /* Distance between buttons */
+                    }
+
+                    .btn {
+                        padding: 10px 20px;
+                        cursor: pointer;
+                    }
+                </style>
+
+                <!-- JavaScript to Handle Modal -->
+                <script>
+                    document.getElementById('complete-order').addEventListener('click', function (event) {
+                        event.preventDefault();
+
+                        // Generate Tracking Number (Example Format)
+                        const trackingNumber = 'ORD-' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+
+                        // Retrieve Billing Details from Form
+                        const firstName = document.getElementById('first-name').value;
+                        const lastName = document.getElementById('last-name').value;
+                        const email = document.getElementById('register-email').value;
+                        const address = document.getElementById('address').value;
+                        const streetAddress = document.getElementById('street-address').value;
+                        const city = document.getElementById('city').value;
+                        const zipCode = document.getElementById('zip-code').value;
+                        const stateProvince = document.getElementById('state-province').value;
+
+                        // Create billing details object
+                        const billingDetails = {
+                            firstName: firstName,
+                            lastName: lastName,
+                            email: email,
+                            address: address,
+                            streetAddress: streetAddress,
+                            city: city,
+                            zipCode: zipCode,
+                            stateProvince: stateProvince
+                        };
+
+                        // Save tracking number and billing details to localStorage
+                        localStorage.setItem('orderTrackingNumber', trackingNumber);
+                        localStorage.setItem('billingDetails', JSON.stringify(billingDetails));
+
+                        // Simulate order process delay
+                        setTimeout(function () {
+                            // Display the tracking number in a modal
+                            document.getElementById('trackingNumber').value = trackingNumber;
+                            document.getElementById('orderTrackingModal').style.display = 'block';
+                        }, 2000); // 2000 milliseconds = 2 seconds
+                    });
+
+                    // Copy Tracking Number to Clipboard
+                    document.getElementById('copyTracking').addEventListener('click', function () {
+                        const trackingInput = document.getElementById('trackingNumber');
+                        trackingInput.select();
+                        document.execCommand('copy');
+                        alert('Tracking number copied!');
+                    });
+
+                    // Redirect to Home after Order Completion
+                    document.getElementById('okButton').addEventListener('click', function () {
+                        window.location.href = 'index.html'; // Adjust the path to your homepage as necessary
+                    });
+
+                    // Close the Modal when Clicking the X button
+                    document.querySelector('.close-modal').addEventListener('click', function () {
+                        document.getElementById('orderTrackingModal').style.display = 'none';
+                    });
+                </script>
+
+
+                <!-- Change Password Form -->
+                <div id="change-password-form" class="form-content">
+                    <h3>Change Your Password</h3>
+                    <form id="changePasswordForm">
+                        <input type="email" id="change-password-email" name="email" required
+                            placeholder="Email Address...">
+                        <input type="password" id="current-password" name="current_password" required
+                            placeholder="Current Password...">
+                        <input type="password" id="new-password" name="new_password" required
+                            placeholder="New Password...">
+                        <input type="password" id="confirm-new-password" name="confirm_new_password" required
+                            placeholder="Confirm New Password...">
+                        <button type="submit" class="btn">Change Password</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            function toggleAccountOptions() {
+                const dropdown = document.getElementById('account-dropdown');
+                if (dropdown.value === 'logout') {
+                    // Perform logout (for demonstration, we just alert)
+                    alert('Logged out successfully!');
+                    // Here, you would typically redirect to a login page
+                    dropdown.value = ""; // Reset dropdown
+                    document.getElementById('account-info').innerText = 'Login';
+                }
+            }
+
+            function toggleAddressForm() {
+                const dropdown = document.getElementById('address-dropdown');
+                const addressForm = document.getElementById('different-address-form');
+                addressForm.classList.toggle('hidden', dropdown.value !== 'different');
+            }
+
+            function handlePayment() {
+                const selectedPayment = document.querySelector('input[name="payment"]:checked');
+                if (selectedPayment) {
+                    if (selectedPayment.value === 'cod') {
+                        alert('Purchase Complete!');
+                    } else {
+                        // Redirect to payment processing (you may need to adjust this based on your payment provider)
+                        alert(`Redirecting to ${selectedPayment.value.toUpperCase()} payment processing...`);
+                        // window.location.href = `/${selectedPayment.value}-payment`; // Uncomment for actual redirect
+                    }
+                } else {
+                    alert('Please select a payment method.');
+                }
+            }
+        </script>
+    </div>
+    <!-- Check Out Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>TECHNO STORE</h4>
+                <ul>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Desktops</a></li>
+                    <li><a href="#">Monitors</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Gaming Gears</a></li>
+                    <li><a href="#">Components</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                    <li><a href="#">Service & Support</a></li>
+                    <li><a href="#">Drivers & Software</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Gaming Teams</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Company Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-newsletter">
+            <div class="social-media">
+                <span>Follow us</span>
+                <ul>
+                    <li><a title="link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TechnoBuild. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">United States / English</a>
+        </div>
+    </div>
+    <!-- Footer Section -->
+
+    <script src="https://kit.fontawesome.com/aa459d6567.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Function to show the login form
+        function showLogin() {
+            document.getElementById("login-form").classList.add("active");
+            document.getElementById("register-form").classList.remove("active");
+            document.getElementById("change-password-form").classList.remove("active");
+            document.getElementById("login-tab").classList.add("active");
+            document.getElementById("register-tab").classList.remove("active");
+            document.getElementById("change-password-tab").classList.remove("active");
+        }
+
+        // Function to show the registration form
+        function showRegister() {
+            document.getElementById("register-form").classList.add("active");
+            document.getElementById("login-form").classList.remove("active");
+            document.getElementById("change-password-form").classList.remove("active");
+            document.getElementById("register-tab").classList.add("active");
+            document.getElementById("login-tab").classList.remove("active");
+            document.getElementById("change-password-tab").classList.remove("active");
+        }
+
+        // Function to show the change password form
+        function showChangePassword() {
+            document.getElementById("change-password-form").classList.add("active");
+            document.getElementById("login-form").classList.remove("active");
+            document.getElementById("register-form").classList.remove("active");
+            document.getElementById("change-password-tab").classList.add("active");
+            document.getElementById("login-tab").classList.remove("active");
+            document.getElementById("register-tab").classList.remove("active");
+        }
+    </script>
+
+    <script>
+        // Example: Assuming the order total is passed to this script
+        const orderTotal = 9000; // Example value
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const codRestriction = document.getElementById('cod-restriction');
+            const completeOrderButton = document.getElementById('complete-order');
+
+            if (orderTotal > 10000) {
+                codRestriction.style.display = 'block';
+                completeOrderButton.disabled = true;
+            }
+        });
+
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform any validation or processing here
+            // If everything is valid, redirect to index.html
+            window.location.href = './index.html';
+        });
+
+        const cartForm = document.getElementById('loginForms');
+
+        cartForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform any validation or processing here
+            // If everything is valid, redirect to cart.html
+            window.location.href = './cart.html';
+        });
+    </script>
+
+
+    </body>
+
+</html>

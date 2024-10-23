@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .ratings-reviews {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+        }
+        
+        .average-rating {
+            width: 40%;
+            text-align: left;
+        }
+
+        .rating-snapshot {
+            left: 500px;
+            width: 40%
+        }
+
+        .rating-snapshot h3,
+        .average-rating h3 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .rating-item,
+        .average-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .rating-item span,
+        .average-item span {
+            margin-right: 10px;
+        }
+
+        .rating-item .stars,
+        .average-item .stars {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .stars i {
+            color: #ccc;
+            margin-right: 2px;
+            left: 0;
+        }
+
+        .average-item {
+            margin-left: 100px;
+        }
+
+        .rating-item .bar,
+        .average-item .bar {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .no-reviews {
+            margin-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">RATINGS & REVIEWS</div>
+        <div class="ratings-reviews">
+            <div class="rating-snapshot">
+                <h3>Rating Snapshot</h3>
+                <div class="rating-item">
+                    <span>5 <i class="fas fa-star"></i></span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="rating-item">
+                    <span>4 <i class="fas fa-star"></i></span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="rating-item">
+                    <span>3 <i class="fas fa-star"></i></span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="rating-item">
+                    <span>2 <i class="fas fa-star"></i></span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="rating-item">
+                    <span>1 <i class="fas fa-star"></i></span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+            </div>
+            <div class="average-rating">
+                <h3>Average Customer Rating</h3>
+                <div class="average-item">
+                    <span>Overall</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>0</span>
+                </div>
+                <div class="average-item">
+                    <span>Performance</span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="average-item">
+                    <span>Feature</span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="average-item">
+                    <span>Value</span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+                <div class="average-item">
+                    <span>Reliability</span>
+                    <div class="bar"></div>
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+        <div class="no-reviews">There are currently no reviews for this product.</div>
+    </div>
+
+</body>
+
+</html>

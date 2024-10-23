@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUILD A PC</title>
+    <link rel="icon" href="./1x/Asset 2.png" type="image/png">
+    <link rel="stylesheet" href="buildpc.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header-container">
+        <div class="header">
+            <div class="logo">
+                <img src="./1x/Final-Logo-2.png" alt="">
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button type="submit" class="search-button">SEARCH</button>
+            </form>
+            <div class="icons">
+                <div class="icon-wrapper">
+                    <div class="notification-badge">3</div>
+                    <a href="trackyourorder.html"><i class="fas fa-truck icon" title="Track Your Order"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="notification-badge" id="product-count">0</div>
+                    <a href="Cart.html"><i class="fas fa-shopping-cart icon" title="Cart"></i></a>
+                </div>
+
+                <div class="icon-wrapper">
+                    <i class="fas fa-user icon" title="User"></i>
+                    <i class="fas fa-caret-down icon"></i>
+
+                    <div class="user-dropdown">
+                        <a href="#">Log In / Sign Out</a>
+                        <a href="#">Purchase History</a>
+                        <a href="#">Account Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-header">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-hover"><a href="index.html" id="home-link">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="products-link">PRODUCTS</a>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Component <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        COMPONENT
+                                    </div>
+                                    <a href="./chassis.html">Chassis Fan</a>
+                                    <a href="./cpu.html">CPU Cooling</a>
+                                    <a href="./graphics.html">Graphics Card</a>
+                                    <a href="./ssd.html">Hard Disk Drive</a>
+                                    <a href="./ssd.html">Solid State Drive</a>
+                                    <a href="./ram.html">Ram</a>
+                                    <a href="./motherboard.html">Motherboard</a>
+                                    <a href="./pccase.html">PC Case</a>
+                                    <a href="./psu.html">Power Supply</a>
+                                    <a href="./intel.html">Processor AMD</a>
+                                    <a href="#">Processor Intel</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Peripherals <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PERIPHERALS
+                                    </div>
+                                    <a href="desktop-section.html">Headset</a>
+                                    <a href="#">Keyboard</a>
+                                    <a href="#">Mouse</a>
+                                    <a href="#">Monitor</a>
+                                    <a href="#">UPS & AVR</a>
+                                    <a href="#">Mouse Pad</a>
+                                    <a href="#">Web & Digital Camera</a>
+                                    <a href="#">Printer & Scanner</a>
+                                    <a href="#">Speaker</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Accessories <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        ACCESSORIES
+                                    </div>
+                                    <a href="desktop-section.html">Cables</a>
+                                    <a href="#">Earphones</a>
+                                    <a href="#">Power Bank</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">PC Furnitures <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PC FURNITURES
+                                    </div>
+                                    <a href="desktop-section.html">Gaming Chairs</a>
+                                    <a href="#">Office Chairs</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Lights & LED</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">OS & Softwares <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        OS & SOFTWARES
+                                    </div>
+                                    <a href="desktop-section.html">Antivirus</a>
+                                    <a href="#">Office Applications</a>
+                                    <a href="#">Operating System</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" id="desktops-link">DESKTOP</a>
+                        <div id="dropdown-content" class="desktop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Desktop <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        DESKTOP
+                                    </div>
+                                    <a href="./desktop-section.html">Gaming Build</a>
+                                    <a href="#">Productivity Build</a>
+                                    <a href="#">Home Use Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./laptop-section.html" id="laptops-link">LAPTOP</a>
+                        <div id="dropdown-content" class="laptop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Laptops <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        LAPTOPS
+                                    </div>
+                                    <a href="./laptop-section.html">Gaming Laptops</a>
+                                    <a href="#">Productivity Laptops</a>
+                                    <a href="#">Chromebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="buildaAPc.html" id="build-link" class="active">BUILD A PC</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section -->
+
+    <!-- Bread Crumb Section -->
+    <div class="breadcrumb">
+        <a href="#">HOME</a>
+        <span>&gt;</span>
+        <a href="#">BUILD A PC</a>
+    </div>
+    <!-- Bread Crumb Section -->
+
+    <!-- Build PC Section -->
+    <section class="buildpc-container">
+        <div class="buildpc-header">
+            <p>Compatibility: No issues or incompatibilities found.</p>
+            <p>Estimated Wattage: 0W</p>
+        </div>
+        <table class="buildpc-table">
+            <thead class="buildpc-thead">
+                <tr>
+                    <th>Component</th>
+                    <th>Product</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Product Link</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody class="buildpc-tbody">
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/processor-green.png" alt="Processor">
+                            <span>Processor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('Processor')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/motherboard-green.png" alt="Motherboard">
+                            <span>Motherboard</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('Motherboard')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/cooler-green.avif" alt="CPU Cooler">
+                            <span>CPU Cooler</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('CPU Cooler')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/computer-tower-green.png" alt="PC Case">
+                            <span>PC Case</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('PC Case')">Add Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/graphic-card-green.png" alt="Graphics Card">
+                            <span>Graphics Card</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('Graphics Card')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/memory-green.png" alt="RAM">
+                            <span>RAM</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('RAM')">Add Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/solid-state-drive-green.png" alt="SSD">
+                            <span>SSD</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('SSD')">Add Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/cooler-green.avif" alt="Case Cooler">
+                            <span>Case Cooler</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('Case Cooler')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="buildpc-img-text">
+                            <img class="buildpc-img" src="./Image/cooler-green.avif" alt="Power Supply">
+                            <span>Power Supply</span>
+                        </div>
+                    </td>
+                    <td>
+                        <button class="buildpc-add-btn" onclick="openComponentModal('Power Supply')">Add
+                            Components</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <!-- Add other components similarly -->
+            </tbody>
+        </table>
+        <div class="buildpc-footer">
+            <div class="buildpc-subtotal">
+                <p>Subtotal: <span>&#8369;0.00</span></p>
+            </div>
+            <button class="buildpc-cart-btn">Add to Cart</button>
+        </div>
+        <script>
+            // Immediately Invoked Function Expression (IIFE) to encapsulate the variable scope
+            (function () {
+                // Initialize selectedComponents
+                if (typeof selectedComponents === 'undefined') {
+                    window.selectedComponents = [];
+                }
+
+                // Calculate subtotal for selected components
+                function calculateSubtotal() {
+                    const subtotalElement = document.querySelector('.buildpc-subtotal span');
+                    const total = selectedComponents.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+                    subtotalElement.innerHTML = `&#8369;${ total.toLocaleString() } .00`;
+                }
+
+                // Get the "Add to Cart" button
+                const addToCartBtn = document.querySelector('.buildpc-cart-btn');
+
+                addToCartBtn.addEventListener('click', () => {
+                    // Retrieve current cart items from localStorage
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+                    // Loop through selected components and add to cart
+                    selectedComponents.forEach(newItem => {
+                        const existingItem = cartItems.find(item => item.title === newItem.title);
+                        if (existingItem) {
+                            existingItem.quantity += newItem.quantity; // Increase quantity if item exists
+                        } else {
+                            cartItems.push(newItem); // Add new item if it doesn't exist
+                        }
+                    });
+
+                    // Save updated cart items to localStorage
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                    // Optionally, redirect to the cart page
+                    window.location.href = 'cart.html';
+                });
+
+                // Calculate subtotal on page load
+                calculateSubtotal();
+            })();
+
+        </script>
+    </section>
+
+    <!-- Select Components Modal -->
+    <div id="id01" class="modal">
+        <div class="modal-content">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <h2>Select Component</h2>
+            <div class="components">
+                <div class="input-group">
+                    <label for="search">Search Components:</label>
+                    <input type="text" class="search-component" id="search" name="query"
+                        placeholder="Enter search term">
+                </div>
+                <div class="input-group">
+                    <label for="chipset">Chipset:</label>
+                    <select id="chipset" name="options">
+                        <option value="option1">All</option>
+                        <option value="option2">AMD</option>
+                        <option value="option3">Intel</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="model">Model:</label>
+                    <select id="model" name="options">
+                        <option value="option1">All</option>
+                        <option value="option2">i3</option>
+                        <option value="option3">i5</option>
+                        <option value="option4">i7</option>
+                        <option value="option5">i9</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="item-select-container">
+                <!-- Dynamic content will be populated here -->
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Select Components Section -->
+
+
+    <!-- Product Info -->
+
+    <div id="secondModal" class="second-modal">
+        <div class="second-modal-content">
+            <span onclick="document.getElementById('secondModal').style.display='none'" class="second-close"
+                title="Close Modal">
+                <i class="fa-solid fa-x"></i>
+            </span>
+            <div class="product-info-image">
+                <img src="./product-images/DESTOP-1.png" alt="Product Image">
+            </div>
+            <h2 class="product-info-title">Katana GF76 12UD-005 17.3" FHD Gaming Laptop</h2>
+            <table class="spec-info-table">
+                <tr class="spec-info-overview">
+                    <th class="info-label">Brand</th>
+                    <td class="info-value">AMD</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Model</th>
+                    <td class="info-value">Ryzen 5 5600G</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Processor Type</th>
+                    <td class="info-value">Box</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Series</th>
+                    <td class="info-value">AMD Ryzen 5 Processors</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">CPU Socket Type</th>
+                    <td class="info-value">AM4</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Core Name</th>
+                    <td class="info-value">Cezanne</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Number Of Cores</th>
+                    <td class="info-value">6</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Number Of Threads</th>
+                    <td class="info-value">12</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Operating Frequency</th>
+                    <td class="info-value">3.9GHz</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Max Turbo Frequency</th>
+                    <td class="info-value">4.4GHz</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">L2 Cache</th>
+                    <td class="info-value">3MB</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">L3 Cache</th>
+                    <td class="info-value">16MB</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Manufacturing Tech</th>
+                    <td class="info-value">7nm</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">64-Bit Support</th>
+                    <td class="info-value">Yes</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Memory Types</th>
+                    <td class="info-value">DDR4</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Memory Channel</th>
+                    <td class="info-value">2</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">PCI Express Revision</th>
+                    <td class="info-value">3</td>
+                </tr>
+                <tr class="spec-info-overview">
+                    <th class="info-label">Thermal Design Power</th>
+                    <td class="info-value">65W</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Product Info -->
+
+    <!-- Footer Section -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>TECHNO STORE</h4>
+                <ul>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Desktops</a></li>
+                    <li><a href="#">Monitors</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Gaming Gears</a></li>
+                    <li><a href="#">Components</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                    <li><a href="#">Service & Support</a></li>
+                    <li><a href="#">Drivers & Software</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Gaming Teams</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Company Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-newsletter">
+            <div class="social-media">
+                <span>Follow us</span>
+                <ul>
+                    <li><a title="link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TechnoBuild. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">United States / English</a>
+        </div>
+    </div>
+    <!-- Footer Section -->
+
+    <script src="https://kit.fontawesome.com/aa459d6567.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Define component data
+        const componentData = {
+            Processor: [
+                { title: 'Intel® Core™ i9-14900KF, 24 Cores & 32 Threads Unlocked Gaming Processor', price: '₱32,184.04', imageSrc: './product-images/INTEL-1.png', link: 'https://example.com/ryzen5', info: 'Brand:Intel &nbsp;&nbsp;&nbsp;&nbsp; Model:Core i9-14900KF <br> Cores:24 &nbsp;&nbsp; Threads:32 &nbsp;&nbsp; Socket Type:LGA 1700 <br> Base Speed:3.2 GHz &nbsp;&nbsp;&nbsp;&nbsp; Turbo Speed:6 GHz <br> Integrated Graphics:None &nbsp;&nbsp;&nbsp;&nbsp; Memory Type:DDR5 - 5600 MHz' },
+                { title: 'Intel® Core™ i9-14900KF, 24 Cores & 32 Threads Unlocked Gaming Processor', price: '₱12,000', imageSrc: './product-images/INTELL-1.png', link: 'https://example.com/corei5', info: 'Brand:Intel &nbsp;&nbsp;&nbsp;&nbsp; Model:Core i9-14900KF <br> Cores:24 &nbsp;&nbsp; Threads:32 &nbsp;&nbsp; Socket Type:LGA 1700 <br> Base Speed:3.2 GHz &nbsp;&nbsp;&nbsp;&nbsp; Turbo Speed:6 GHz <br> Integrated Graphics:None &nbsp;&nbsp;&nbsp;&nbsp; Memory Type:DDR5 - 5600 MHz' }
+            ],
+            Motherboard: [
+                { title: 'MSI MPG Z790 Edge WiFi Gaming Motherboard (USB 3.2 Gen2, Wi-Fi 6E)', price: '₱21,100.88', imageSrc: './product-images/MOTHERBOARD-1.png', link: 'https://example.com/rogstrix', info: 'Brand:MSI &nbsp;&nbsp;&nbsp;&nbsp; Model:MPG Z790 Edge <br> Chipset:Intel Z790 &nbsp;&nbsp; Form Factor:ATX &nbsp;&nbsp; Socket Type:LGA 1700 <br> Memory Slots:4 Slots &nbsp;&nbsp;&nbsp;&nbsp; Max Memory Support:128 GB' },
+                { title: 'MSI MPG Z790 Edge WiFi Gaming Motherboard (USB 3.2 Gen2, Wi-Fi 6E)', price: '₱21,100.88', imageSrc: './product-images/MOTHERBOARDD-1.png', link: 'https://example.com/msi', info: 'Brand:MSI &nbsp;&nbsp;&nbsp;&nbsp; Model:MPG Z790 Edge <br> Chipset:Intel Z790 &nbsp;&nbsp; Form Factor:ATX &nbsp;&nbsp; Socket Type:LGA 1700 <br> Memory Slots:4 Slots &nbsp;&nbsp;&nbsp;&nbsp; Max Memory Support:128 GB' }
+            ],
+            'CPU Cooler': [
+                { title: 'MSI MAG CoreLiquid 360R V2 - AIO ARGB CPU Liquid Cooler', price: '₱6,324.11', imageSrc: './product-images/CPUU-1.png', link: 'https://example.com/hyper212', info: 'Brand:MSI &nbsp;&nbsp;&nbsp;&nbsp; Model:MAG CoreLiquid 360R V2 <br> Fan RPM:500 to 2000 RPM &nbsp;&nbsp;&nbsp;&nbsp; Noise Level:14.3 to 34.3 dBA <br> Color:Black RGB' },
+                { title: 'MSI MAG CoreLiquid 360R V2 - AIO ARGB CPU Liquid Cooler', price: '₱6,324.11', imageSrc: './product-images/CPUU-1.png', link: 'https://example.com/hyper212', info: 'Brand:MSI &nbsp;&nbsp;&nbsp;&nbsp; Model:MAG CoreLiquid 360R V2 <br> Fan RPM:500 to 2000 RPM &nbsp;&nbsp;&nbsp;&nbsp; Noise Level:14.3 to 34.3 dBA <br> Color:Black RGB' }
+            ],
+            'PC Case': [
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+                { title: 'NZXT H6 Flow RGB | CC-H61FB-R1 | Compact Dual-Chamber Mid-Tower Airflow Case', price: '₱7,186.56', imageSrc: './product-images/PCCASE-1.png', link: 'https://example.com/h510', info: 'Brand:NZXT &nbsp;&nbsp;&nbsp;&nbsp; Model:CC-H61FB-R1 <br> Side Panel:Tempered Glass &nbsp;&nbsp; Cabinet Type:ATX Mid Tower &nbsp;&nbsp; Color:Black' },
+            ],
+            'Graphics Card': [
+                { title: 'GeForce RTX® 4090 24GB XLR8 Gaming VERTO EPIC-X RGB™ Triple Fan Graphics Card', price: '₱94,869.73', imageSrc: './product-images/GRAPHICS-1.png', link: 'https://example.com/rtx3060', info: 'Brand:NVIDIA &nbsp;&nbsp;&nbsp;&nbsp; Model:VCG409024TFXXPB <br> Memory:24 GB &nbsp;&nbsp; Memory Interface:GDDR6X &nbsp;&nbsp; Length:332 mm <br> Interface:PCIe x16 &nbsp;&nbsp;&nbsp;&nbsp; Chipset:GeForce RTX 4090 <br> Base Clock:2230 MHz &nbsp;&nbsp; Clock Speed:2520 MHz &nbsp;&nbsp; Frame Sync:G-Sync' },
+                { title: 'GeForce RTX® 4090 24GB XLR8 Gaming VERTO EPIC-X RGB™ Triple Fan Graphics Card', price: '₱94,869.73', imageSrc: './product-images/GRAPHICS-1.png', link: 'https://example.com/rtx3060', info: 'Brand:NVIDIA &nbsp;&nbsp;&nbsp;&nbsp; Model:VCG409024TFXXPB <br> Memory:24 GB &nbsp;&nbsp; Memory Interface:GDDR6X &nbsp;&nbsp; Length:332 mm <br> Interface:PCIe x16 &nbsp;&nbsp;&nbsp;&nbsp; Chipset:GeForce RTX 4090 <br> Base Clock:2230 MHz &nbsp;&nbsp; Clock Speed:2520 MHz &nbsp;&nbsp; Frame Sync:G-Sync' },
+                { title: 'GeForce RTX® 4090 24GB XLR8 Gaming VERTO EPIC-X RGB™ Triple Fan Graphics Card', price: '₱94,869.73', imageSrc: './product-images/GRAPHICS-1.png', link: 'https://example.com/rtx3060', info: 'Brand:NVIDIA &nbsp;&nbsp;&nbsp;&nbsp; Model:VCG409024TFXXPB <br> Memory:24 GB &nbsp;&nbsp; Memory Interface:GDDR6X &nbsp;&nbsp; Length:332 mm <br> Interface:PCIe x16 &nbsp;&nbsp;&nbsp;&nbsp; Chipset:GeForce RTX 4090 <br> Base Clock:2230 MHz &nbsp;&nbsp; Clock Speed:2520 MHz &nbsp;&nbsp; Frame Sync:G-Sync' },
+                { title: 'GeForce RTX® 4090 24GB XLR8 Gaming VERTO EPIC-X RGB™ Triple Fan Graphics Card', price: '₱94,869.73', imageSrc: './product-images/GRAPHICS-1.png', link: 'https://example.com/rtx3060', info: 'Brand:NVIDIA &nbsp;&nbsp;&nbsp;&nbsp; Model:VCG409024TFXXPB <br> Memory:24 GB &nbsp;&nbsp; Memory Interface:GDDR6X &nbsp;&nbsp; Length:332 mm <br> Interface:PCIe x16 &nbsp;&nbsp;&nbsp;&nbsp; Chipset:GeForce RTX 4090 <br> Base Clock:2230 MHz &nbsp;&nbsp; Clock Speed:2520 MHz &nbsp;&nbsp; Frame Sync:G-Sync' },
+                { title: 'GeForce RTX® 4090 24GB XLR8 Gaming VERTO EPIC-X RGB™ Triple Fan Graphics Card', price: '₱94,869.73', imageSrc: './product-images/GRAPHICS-1.png', link: 'https://example.com/rtx3060', info: 'Brand:NVIDIA &nbsp;&nbsp;&nbsp;&nbsp; Model:VCG409024TFXXPB <br> Memory:24 GB &nbsp;&nbsp; Memory Interface:GDDR6X &nbsp;&nbsp; Length:332 mm <br> Interface:PCIe x16 &nbsp;&nbsp;&nbsp;&nbsp; Chipset:GeForce RTX 4090 <br> Base Clock:2230 MHz &nbsp;&nbsp; Clock Speed:2520 MHz &nbsp;&nbsp; Frame Sync:G-Sync' },
+            ],
+            RAM: [
+                { title: 'CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)', price: '₱12,648.79', imageSrc: './product-images/RAMMMMM-1.png', link: 'https://example.com/vengeance', info: 'Brand:Corsair &nbsp;&nbsp;&nbsp;&nbsp; Model:CMH64GX5M2B6400C32 <br> RAM Size:64 GB &nbsp;&nbsp; Quantity:2 x 32 GB &nbsp;&nbsp; RAM Type:DDR5 <br> RAM Speed:6400 MHz &nbsp;&nbsp; DIMM Type:288-PIN &nbsp;&nbsp; CAS Latency:CL32' },
+                { title: 'CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)', price: '₱12,648.79', imageSrc: './product-images/RAMMMMM-1.png', link: 'https://example.com/vengeance', info: 'Brand:Corsair &nbsp;&nbsp;&nbsp;&nbsp; Model:CMH64GX5M2B6400C32 <br> RAM Size:64 GB &nbsp;&nbsp; Quantity:2 x 32 GB &nbsp;&nbsp; RAM Type:DDR5 <br> RAM Speed:6400 MHz &nbsp;&nbsp; DIMM Type:288-PIN &nbsp;&nbsp; CAS Latency:CL32' },
+                { title: 'CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)', price: '₱12,648.79', imageSrc: './product-images/RAMMMMM-1.png', link: 'https://example.com/vengeance', info: 'Brand:Corsair &nbsp;&nbsp;&nbsp;&nbsp; Model:CMH64GX5M2B6400C32 <br> RAM Size:64 GB &nbsp;&nbsp; Quantity:2 x 32 GB &nbsp;&nbsp; RAM Type:DDR5 <br> RAM Speed:6400 MHz &nbsp;&nbsp; DIMM Type:288-PIN &nbsp;&nbsp; CAS Latency:CL32' },
+                { title: 'CORSAIR VENGEANCE RGB DDR5 RAM 64GB (2x32GB)', price: '₱12,648.79', imageSrc: './product-images/RAMMMMM-1.png', link: 'https://example.com/vengeance', info: 'Brand:Corsair &nbsp;&nbsp;&nbsp;&nbsp; Model:CMH64GX5M2B6400C32 <br> RAM Size:64 GB &nbsp;&nbsp; Quantity:2 x 32 GB &nbsp;&nbsp; RAM Type:DDR5 <br> RAM Speed:6400 MHz &nbsp;&nbsp; DIMM Type:288-PIN &nbsp;&nbsp; CAS Latency:CL32' },
+            ],
+            SSD: [
+                { title: 'M482 2TB PCIe Gen4 NVMe M.2-2280 Extreme Performance Internal Solid State Drive', price: '₱8,000', imageSrc: './product-images/SSD-1.png', link: 'https://example.com/970evo', info: 'Brand:Sabrent &nbsp;&nbsp;&nbsp;&nbsp; Model:Rocket 4.0 <br> Capacity:2 TB &nbsp;&nbsp;&nbsp;&nbsp; Type:SSD <br> Interface:PCIe x4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Form Factor:M.2-2280' },
+                { title: 'M482 2TB PCIe Gen4 NVMe M.2-2280 Extreme Performance Internal Solid State Drive', price: '₱8,000', imageSrc: './product-images/SSD-1.png', link: 'https://example.com/970evo', info: 'Brand:Sabrent &nbsp;&nbsp;&nbsp;&nbsp; Model:Rocket 4.0 <br> Capacity:2 TB &nbsp;&nbsp;&nbsp;&nbsp; Type:SSD <br> Interface:PCIe x4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Form Factor:M.2-2280' },
+                { title: 'M482 2TB PCIe Gen4 NVMe M.2-2280 Extreme Performance Internal Solid State Drive', price: '₱8,000', imageSrc: './product-images/SSD-1.png', link: 'https://example.com/970evo', info: 'Brand:Sabrent &nbsp;&nbsp;&nbsp;&nbsp; Model:Rocket 4.0 <br> Capacity:2 TB &nbsp;&nbsp;&nbsp;&nbsp; Type:SSD <br> Interface:PCIe x4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Form Factor:M.2-2280' },
+                { title: 'M482 2TB PCIe Gen4 NVMe M.2-2280 Extreme Performance Internal Solid State Drive', price: '₱8,000', imageSrc: './product-images/SSD-1.png', link: 'https://example.com/970evo', info: 'Brand:Sabrent &nbsp;&nbsp;&nbsp;&nbsp; Model:Rocket 4.0 <br> Capacity:2 TB &nbsp;&nbsp;&nbsp;&nbsp; Type:SSD <br> Interface:PCIe x4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Form Factor:M.2-2280' },
+            ],
+            'Case Cooler': [
+                { title: 'ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade', price: '₱3,391.75', imageSrc: './product-images/CHASSIS-1.jpg', link: 'https://example.com/masterfan', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:TUF GAMING TF120 ARGB 3IN1 <br> Fan RPM:250 to 1900 RPM &nbsp;&nbsp; Airflow:76 CFM &nbsp;&nbsp; Noise Level:29 dBA' },
+                { title: 'ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade', price: '₱3,391.75', imageSrc: './product-images/CHASSIS-1.jpg', link: 'https://example.com/masterfan', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:TUF GAMING TF120 ARGB 3IN1 <br> Fan RPM:250 to 1900 RPM &nbsp;&nbsp; Airflow:76 CFM &nbsp;&nbsp; Noise Level:29 dBA' },
+                { title: 'ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade', price: '₱3,391.75', imageSrc: './product-images/CHASSIS-1.jpg', link: 'https://example.com/masterfan', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:TUF GAMING TF120 ARGB 3IN1 <br> Fan RPM:250 to 1900 RPM &nbsp;&nbsp; Airflow:76 CFM &nbsp;&nbsp; Noise Level:29 dBA' },
+                { title: 'ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade', price: '₱3,391.75', imageSrc: './product-images/CHASSIS-1.jpg', link: 'https://example.com/masterfan', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:TUF GAMING TF120 ARGB 3IN1 <br> Fan RPM:250 to 1900 RPM &nbsp;&nbsp; Airflow:76 CFM &nbsp;&nbsp; Noise Level:29 dBA' },
+                { title: 'ASUS TUF Gaming TF120 ARGB Chassis Fan 3Pin Customizable LEDs Blade', price: '₱3,391.75', imageSrc: './product-images/CHASSIS-1.jpg', link: 'https://example.com/masterfan', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:TUF GAMING TF120 ARGB 3IN1 <br> Fan RPM:250 to 1900 RPM &nbsp;&nbsp; Airflow:76 CFM &nbsp;&nbsp; Noise Level:29 dBA' },
+            ],
+            'Power Supply': [
+                { title: 'ASUS Rog Thor 1200, 80+ Platinum Certified 1200W Fully-Modular RGB Power Supply', price: '₱18,414.03', imageSrc: './product-images/PSU-1.png', link: 'https://example.com/rm750x', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:Rog Thor <br> Power:1200 W &nbsp;&nbsp; Efficiency:80+ Platinum &nbsp;&nbsp; Color:Black' },
+                { title: 'ASUS Rog Thor 1200, 80+ Platinum Certified 1200W Fully-Modular RGB Power Supply', price: '₱18,414.03', imageSrc: './product-images/PSU-1.png', link: 'https://example.com/rm750x', info: 'Brand:ASUS &nbsp;&nbsp;&nbsp;&nbsp; Model:Rog Thor <br> Power:1200 W &nbsp;&nbsp; Efficiency:80+ Platinum &nbsp;&nbsp; Color:Black' },
+            ]
+        };
+
+        let selectedComponents = []; // Array to hold selected components
+
+        // Function to open the first component modal and store category
+        function openComponentModal(category) {
+            document.getElementById('id01').dataset.selectedCategory = category;
+            const componentList = componentData[category] || []; // Get the components for the selected category
+            const componentContainer = document.querySelector('.item-select-container'); // Get the component list container
+            componentContainer.innerHTML = ''; // Clear previous content
+
+            // Populate the container with the relevant components as product cards
+            componentList.forEach(component => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                productCard.innerHTML = `
+                    <div class="product-card-image">
+                        <img src="${component.imageSrc}" alt="${component.title}">
+                    </div>
+                    <h2 class="product-card-title">${component.title}</h2>
+                    <div class="product-card-divider"></div>
+                    <ul class="product-card-specs">
+                        <li>Processor: ${component.title}</li>
+                        <li>Price: ${component.price}</li>
+                        <li>Info: ${component.info}</li>
+                    </ul>
+                    <div class="product-card-section">
+                        <div class="price-product-card-section">
+                            <p class="product-card-price">${component.price}</p>
+                        </div>
+                    </div>
+                    <div class="product-card-divider"></div>
+                    <div class="product-card-item-btn">
+                        <!-- Info Button -->
+                        <button class="info-item-button"
+                            onclick="showComponentInfo('${component.title}', '${component.price}', '${component.imageSrc}', '${component.link}', '${component.info}'); event.stopPropagation();">
+                            Info
+                        </button>
+                        <!-- Select Button -->
+                        <button class="selec-item-button"
+                            onclick="addComponentToTable('${component.title}', '${component.price}', '${component.imageSrc}', '${component.link}', '${component.info}')">
+                            Select
+                        </button>
+                    </div>
+                `;
+                componentContainer.appendChild(productCard);
+            });
+
+            document.getElementById('id01').style.display = 'block';
+        }
+
+        // Function to show product info in the second modal
+        function showComponentInfo(title, price, imageSrc, link, info) {
+            // Set product details in the second modal
+            document.querySelector('.product-info-title').innerText = title;
+            document.querySelector('.product-info-image img').src = imageSrc;
+
+            const specTable = document.querySelector('.spec-info-table');
+            specTable.innerHTML = ''; // Clear previous content
+
+            // Add relevant specs (customize as needed)
+            const specs = [
+                { label: 'Model', value: title },
+                { label: 'Price', value: price },
+                { label: 'Info', value: info },
+                { label: 'Link', value: `<a href="${link}" target="_blank">Click Here</a>` },
+            ];
+
+            specs.forEach(spec => {
+                const row = document.createElement('tr');
+                row.className = 'spec-info-overview';
+                row.innerHTML = `
+                    <th class="info-label">${spec.label}</th>
+                    <td class="info-value">${spec.value}</td>
+                `;
+                specTable.appendChild(row);
+            });
+
+            // Open the second modal
+            document.getElementById('secondModal').style.display = 'block';
+        }
+
+        // Function to add component to the table
+        function addComponentToTable(title, price, imageSrc, link, info) {
+            // Add the component to the selectedComponents array
+            selectedComponents.push({ title, price: parseFloat(price.replace(/₱|,/g, '').trim()), imageSrc, link });
+
+            const tbody = document.querySelector('.buildpc-tbody');
+            const selectedCategory = document.getElementById('id01').dataset.selectedCategory;
+
+            // Find the row for the selected category
+            const rows = Array.from(tbody.rows);
+            const categoryRow = rows.find(row => row.cells[0].querySelector('div').innerText.trim() === selectedCategory);
+
+            if (categoryRow) {
+                // Add the component details to the table
+                categoryRow.cells[1].innerHTML = `
+                    <div class="buildpc-img-text">
+                        <img class="buildpc-img" src="${imageSrc}" alt="${title}" style="width: 100px;">
+                    </div>
+                `;
+                categoryRow.cells[2].innerHTML = `
+                    <div class="details">
+                        <div class="brand">${title}</div>
+                        <div class="specs">${info}</div>
+                    </div>
+                `;
+                categoryRow.cells[3].innerHTML = price;
+
+                categoryRow.cells[4].innerHTML = `<a href="${link}" target="_blank">Click Here</a>`;
+
+                categoryRow.cells[5].innerHTML = `
+                    <button style="background-color: transparent; border: none; cursor: pointer; color: #e74c3c; font-size: 24px;" onclick="clearItem(this)" class="clear-btn">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                `;
+
+                // Update the subtotal
+                updateSubtotal();
+
+                // Close the item selection modal with a small delay for a smooth user experience
+                setTimeout(() => {
+                    document.getElementById('id01').style.display = 'none';
+                }, 200); // Delay of 200 milliseconds
+            }
+            updateCartNotification();
+        }
+
+        // Function to clear the row and restore the "Add Components" button
+        function clearItem(button) {
+            // Find the row that contains the button
+            const row = button.closest('tr');
+
+            // Get the component title from the row (or any unique identifier)
+            const componentTitle = row.cells[2].querySelector('.brand').innerText.trim(); // Adjusted to target the title properly
+
+            // Remove the component from the selectedComponents array
+            selectedComponents = selectedComponents.filter(component => component.title !== componentTitle);
+
+            // Restore the original state of the row with the "Add Components" button
+            const selectedCategory = row.cells[0].querySelector('span').innerText.trim();
+
+            row.cells[1].innerHTML = `
+        <button class="buildpc-add-btn" onclick="openComponentModal('${selectedCategory}')">Add Components</button>
+    `;
+
+            row.cells[2].innerHTML = ''; // Clear details
+            row.cells[3].innerHTML = ''; // Clear price
+            row.cells[4].innerHTML = ''; // Clear link
+            row.cells[5].innerHTML = ''; // Clear the trash icon
+
+            // Update the subtotal immediately after removing the item
+            updateSubtotal();
+        }
+
+
+        // Function to update the subtotal display
+        function updateSubtotal() {
+            const subtotalElement = document.querySelector('.buildpc-subtotal span');
+
+            // Calculate the subtotal based on the remaining selected components
+            const total = selectedComponents.reduce((acc, component) => acc + component.price, 0);
+
+            // Update the subtotal element
+            subtotalElement.textContent = `₱${total.toLocaleString()}`;
+
+            // If there are no components selected, display ₱0.00
+            if (selectedComponents.length === 0) {
+                subtotalElement.textContent = `₱0.00`;
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

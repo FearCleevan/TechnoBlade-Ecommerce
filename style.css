@@ -1,0 +1,1131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* -- Header Section CSS -- */
+.main-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    top: 0px;
+    border-bottom: 1px solid #d10023;
+}
+
+.logo img {
+    width: 220px;
+    margin-left: 100px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #d10023;
+    border-radius: 20px 0 0 20px;
+    width: 450px;
+}
+
+.search-button {
+    padding: 11px;
+    width: 100px;
+    border: none;
+    margin-top: -15px;
+    border-radius: 0 20px 20px 0;
+    background-color: #d10023;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-button:hover {
+    background-color: #d32642;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 50px;
+    gap: 50px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-badge {
+    background-color: #d10023;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 16px;
+    margin-top: -18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.notification-badge:hover {
+    background-color: #d32642;
+}
+
+.fas {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.icon:hover {
+    color: #b6b6b6;
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 21px;
+    right: -70px;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-dropdown a {
+    float: none;
+    color: #000000;
+    font-size: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown a:hover {
+    background-color: #d10023;
+    color: #fff;
+}
+
+.icon-wrapper:hover .user-dropdown {
+    display: block;
+}
+
+.h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-header {
+    background-color: #f5f5f5;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-list li a.active {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#products-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#build-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#laptops-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#desktops-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+.desktop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 41%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 21%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.laptop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 61%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.desktop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.laptop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.desktop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.laptop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown:hover .desktop-dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .laptop-dropdown-content {
+    display: block;
+}
+
+.submenu-wrapper {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 0;
+    background-color: #ffffff;
+    min-width: 280px;
+    z-index: 1;
+}
+
+.submenu-content a {
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.submenu-content-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px;
+    color: #d10023;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submenu-content a {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.submenu-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.submenu-wrapper:hover .submenu-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+/* -- Header Section CSS -- */
+
+/* Modal Login / Register CSS */
+.form-container {
+    display: none;
+    position: fixed;
+    z-index: 2; /* Adjust z-index to appear above the backdrop */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    z-index: 1; /* Behind the modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-modal-container {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    color: red;
+}
+
+/* Tabs for switching between Login and Register */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tabs button.active {
+    border-bottom: 2px solid #d10023;
+    color: #d10023;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tabs button:hover {
+    background-color: #ffffff;
+}
+
+/* Form Content */
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    /* Adds space between the input fields */
+    /* Adds space below each row */
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Makes the fields the same width */
+}
+
+/* Form styling */
+h3 {
+    font-size: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.newsletter-label {
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+a {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #d10023;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn:hover {
+    background-color: #d32642;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Modal Login / Register CSS */
+
+/* Banner Section CSS */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 5px;
+    height: 550px;
+}
+
+.banner-container {
+    margin-top: 100px;
+}
+
+.banner-container a {
+    font-size: 30px;
+}
+
+.prev-slider {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    margin-left: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.next-slider {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    margin-right: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.prev-slider:hover,
+.next-slider:hover {
+    color: #d10023;
+}
+
+.active-slider,
+.dot:hover {
+    background-color: #ffffff;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .prev-slider,
+    .next-slider {
+        font-size: 11px
+    }
+}
+
+/* Banner Section CSS */
+
+/* Product Explore CSS */
+.product-explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#products-2 {
+    color: gray;
+    margin-left: 10px
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.category {
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.category p {
+    margin: 10px 0 0;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
+
+/* Product Explore CSS */
+
+/* Official Section CSS */
+.official-container {
+    width: calc(100% - 40px);
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.official-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Official Section CSS */
+
+/* Footer Section CSS */
+.footer-main {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #bbb;
+    transition: color 0.3s;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-social-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.social-media ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    margin-right: 15px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.3s;
+}
+
+.social-media ul li a:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #ffffff;
+    color: #464646;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin-left: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    color: #303030;
+    margin-right: 10px;
+    transition: color 0.3s;
+    margin-right: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a:hover {
+    color: #d00;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container,
+    .footer-social-newsletter,
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-links a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Footer Section CSS */
+
+/* Product Card CSS */
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.products-item-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item-card a {
+    display: inline-block;
+    /* or block */
+}
+
+.product-item-card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+/* Product Card */
+.product-card-container {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Product Image */
+.product-item-img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.product-item-img:hover {
+    opacity: 0.7;
+}
+
+/* Divider (Line) */
+.divider-product {
+    width: 80%;
+    height: 1px;
+    background-color: #161616;
+    margin: 5px 0;
+}
+
+/* Product Title */
+.product-item-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Product Specifications */
+.product-item-specs {
+    text-align: left;
+    padding: 0;
+    font-size: 12px;
+    color: #666;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.product-price-section {
+    display: flex;
+    justify-content: start;
+}
+
+.price-card-section {
+    display: flex;
+    gap: 10px;
+}
+
+.old-product-price {
+    text-decoration: line-through;
+    color: #a0a0a0;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.new-product-price {
+    font-weight: bold;
+    font-size: 15px;
+    color: #ff0000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* Optional: makes the new price red */
+}
+
+.product-item-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.product-item-info {
+    padding: 8px 13px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 30%;
+}
+
+.product-item-info {
+    background-color: #eee;
+    color: #333;
+}
+
+.product-item-info:hover {
+    background-color: #e2e2e2;
+}
+
+@media (max-width: 768px) {
+    .product-card-container {
+        width: 100%;
+    }
+}
+
+/* Product Card CSS */
+
+/* Add to Cart Animation CSS */
+.cart-button {
+    position: relative;
+    outline: 0;
+    background-color: #d00;
+    color: #fff;
+    border: none;
+    width: 60%;
+    padding: 10px 15px;
+    border-radius: 16px;
+    line-height: 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: #b00;
+}
+
+.cart-button:focus {
+    outline: none !important
+}
+
+.cart-button .fa-plus {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 22%;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.cart-button .fa-circle-thin {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -20%;
+    font-size: 11px;
+    transform: translate(-50%, -50%)
+}
+
+.cart-button .fa-check {
+    position: absolute;
+    z-index: 1;
+    top: -52%;
+    left: 20%;
+    font-size: 12px;
+    transform: translate(-50%, -50%)
+}
+
+.cart-button span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+}
+
+.cart-button span.added {
+    opacity: 0
+}
+
+.cart-button.clicked .fa-plus {
+    animation: addicon 2s ease-in forwards
+}
+
+.cart-button.clicked {
+    animation: color 2s ease-in forwards
+}
+
+.cart-button.clicked .fa-circle-thin {
+    animation: circle 1s ease-in forwards
+}
+
+.cart-button.clicked .fa-check {
+    animation: check 2s ease-in forwards
+}
+
+.cart-button.clicked span.add-to-cart {
+    animation: addcart 2s ease-in forwards
+}
+
+.cart-button.clicked span.added {
+    animation: added 2s ease-in forwards
+}
+
+@keyframes addicon {
+    0% {
+        opacity: 1
+    }
+
+    30%,
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes circle {
+    0% {
+        left: -10%
+    }
+
+    100% {
+        left: 20%
+    }
+}
+
+@keyframes check {
+
+    0%,
+    40% {
+        top: -20%
+    }
+
+    60% {
+        top: 48%
+    }
+
+    100% {
+        top: 48%
+    }
+}
+
+@keyframes addcart {
+
+    0%,
+    30% {
+        opacity: 1
+    }
+
+    30%,
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes added {
+
+    0%,
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes color {
+    0% {
+        background-color: blue
+    }
+
+    80%,
+    100% {
+        background-color: green
+    }
+}
+
+/* Add to Cart Animation CSS */

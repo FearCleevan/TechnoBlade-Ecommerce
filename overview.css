@@ -1,0 +1,1106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* -- Header Section CSS -- */
+.main-header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    top: 0px;
+    border-bottom: 1px solid #d10023;
+}
+
+.logo img {
+    width: 220px;
+    margin-left: 100px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #d10023;
+    border-radius: 20px 0 0 20px;
+    width: 450px;
+}
+
+.search-button {
+    padding: 11px;
+    width: 100px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #d10023;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-button:hover {
+    background-color: #d32642;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 50px;
+    gap: 50px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-badge {
+    background-color: #d10023;
+    position: absolute;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 7px 10px 7px 10px;
+    border-radius: 16px;
+    margin-top: -18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.notification-badge:hover {
+    background-color: #d32642;
+}
+
+.fas {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.shipping-info-preview .fas {
+    cursor: pointer;
+    color: #000000;
+}
+
+.icon:hover {
+    color: #b6b6b6;
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 21px;
+    right: -70px;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-dropdown a {
+    float: none;
+    color: #000000;
+    font-size: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-dropdown a:hover {
+    background-color: #d10023;
+    color: #fff;
+}
+
+.icon-wrapper:hover .user-dropdown {
+    display: block;
+}
+
+.h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-header {
+    background-color: #f5f5f5;
+    padding: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav-list li a.active {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#home-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#products-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#build-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#laptops-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+#desktops-link:hover {
+    color: red;
+    border-bottom: 3px solid red;
+    padding-bottom: 3px;
+}
+
+.desktop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 41%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 21%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.laptop-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 95%;
+    left: 61%;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.desktop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.laptop-dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.desktop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+.laptop-dropdown-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown:hover .desktop-dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .laptop-dropdown-content {
+    display: block;
+}
+
+.submenu-wrapper {
+    position: relative;
+}
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 260px;
+    top: 0;
+    background-color: #ffffff;
+    min-width: 280px;
+    z-index: 1;
+}
+
+.submenu-content a {
+    color: white;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.submenu-content-title {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px;
+    color: #d10023;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.submenu-content a {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.submenu-content a:hover {
+    background-color: #d10023;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.submenu-wrapper:hover .submenu-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+/* -- Header Section CSS -- */
+
+/* BreadCrumb CSS */
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #acacac;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.breadcrumb a {
+    color: #414141;
+    text-decoration: none;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.breadcrumb span {
+    color: #3f3f3f;
+    margin: 0 5px;
+    font-weight: bold;
+}
+/* BreadCrumb CSS */
+
+/* Overview CSS */
+img {
+    vertical-align: middle;
+}
+
+.main-over-container {
+    display: flex; 
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+    gap: 50px;/* This will make the child divs (overview-container and container-preview) align side by side */
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.overview-container {
+    position: relative;
+    width: 665px;
+}
+
+.container-preview {
+    margin: 100px;
+    position: relative;
+    width: 665px;
+}
+
+/* Hide the images by default */
+.overview-mySlides {
+    width: 663px;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.overview-cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.overview-prev,
+.overview-next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 12px;
+    margin-top: -50px;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.overview-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.overview-prev:hover,
+.overview-next:hover {
+    color: rgb(160, 0, 0);
+}
+
+/* Number text (1/3 etc) */
+.overview-numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.overview-img {
+    width: 645px;
+}
+
+/* Container for image text */
+.overview-caption-container {
+    text-align: center;
+    padding: 2px;
+    color: white;
+}
+
+.overview-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.overview-column {
+    float: left;
+    width: 110px;
+}
+
+/* Add a transparency effect for thumbnail images */
+.overview-demo {
+    opacity: 0.6;
+    width: 110px;
+}
+
+.overview-active,
+.overview-demo:hover {
+    opacity: 1;
+}
+
+.spec-container {
+    margin-left: 200px;
+    margin-right: 200px;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.spec-table th {
+    text-transform: uppercase;
+}
+.specs-container {
+    display: flex;
+    justify-content: space-between;
+}
+.spec-divider {
+    border-bottom: 1px solid #555555;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+.spec-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.spec-table th, .spec-table td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: top;
+}
+.spec-table th {
+    width: 20%;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.spec-table td {
+    width: 80%;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.spec-table tr {
+    border-bottom: 1px solid #ddd;
+}
+.spec-table tr:last-child {
+    border-bottom: none;
+}
+.spec-table ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.spec-table .os, .spec-table .manufacturer-number, .spec-table .product-condition, .spec-table .cpu, .spec-table .chipset, .spec-table .cpu-socket, .spec-table .form-factor, .spec-table .memory, .spec-table .lan, .spec-table .wireless-lan, .spec-table .bluetooth, .spec-table .audio, .spec-table .storage, .spec-table .onboard-graphics, .spec-table .raid, .spec-table .io-rear, .spec-table .expansion-slots {
+    padding: 8px;
+}
+
+.container-preview {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.offer-preview {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.title-preview {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.description-preview {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content-preview {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content-preview ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.content-preview ul li {
+    margin-bottom: 2px;
+}
+.divider-preview {
+    border-top: 1px solid #cccccc;
+    margin: 20px 0;
+}
+.rating-preview, .shipping-info-preview, .price-section-preview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.rating-preview i {
+    color: #ccc;
+}
+.rating-preview span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+.shipping-info-preview div {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+}
+.shipping-info-preview i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.promo-preview {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.promo-preview select {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.promo-bundle {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.promo-bundle-option {
+    background-color: pink;
+}
+
+.price-section-preview {
+    justify-content: space-between;
+}
+.price-section-preview .price-preview {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+.price-section-preview .original-price-preview {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+.price-section-preview .stock-preview {
+    font-size: 14px;
+    color: green;
+}
+.buttons-preview {
+    display: flex;
+    justify-content: space-between;
+}
+.buttons-preview button {
+    padding: 10px 20px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.buttons-preview .compare-preview {
+    background-color: #ccc;
+    padding: 10px 15px;
+    border-radius: 17px;
+    width: 15%;
+}
+.buttons-preview .cart-button {
+    background-color: red;
+    color: #fff;
+    width: 200px;
+}
+.compare-preview:hover {
+    background-color: #bdbcbc;
+}
+/* Overview CSS */
+
+/* Add to Cart Animation CSS */
+.cart-button {
+    position: relative;
+    outline: 0;
+    background-color: #d00;
+    color: #fff;
+    border: none;
+    width: 60%;
+    padding: 10px 15px;
+    border-radius: 16px;
+    line-height: 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cart-button:hover {
+    background-color: #b00;
+}
+
+.cart-button:focus {
+    outline: none !important
+}
+
+.cart-button .fa-plus {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 22%;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+}
+
+.cart-button .fa-circle-thin {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -20%;
+    font-size: 13px;
+    transform: translate(-50%, -50%)
+}
+
+.cart-button .fa-check {
+    position: absolute;
+    z-index: 1;
+    top: -52%;
+    left: 20%;
+    font-size: 13px;
+    transform: translate(-50%, -50%)
+}
+
+.cart-button span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+
+.cart-button span.added {
+    opacity: 0
+}
+
+.cart-button.clicked .fa-plus {
+    animation: addicon 2s ease-in forwards
+}
+
+.cart-button.clicked {
+    animation: color 2s ease-in forwards
+}
+
+.cart-button.clicked .fa-circle-thin {
+    animation: circle 1s ease-in forwards
+}
+
+.cart-button.clicked .fa-check {
+    animation: check 2s ease-in forwards
+}
+
+.cart-button.clicked span.add-to-cart {
+    animation: addcart 2s ease-in forwards
+}
+
+.cart-button.clicked span.added {
+    animation: added 2s ease-in forwards
+}
+
+@keyframes addicon {
+    0% {
+        opacity: 1
+    }
+
+    30%,
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes circle {
+    0% {
+        left: -10%
+    }
+
+    100% {
+        left: 20%
+    }
+}
+
+@keyframes check {
+
+    0%,
+    40% {
+        top: -20%
+    }
+
+    60% {
+        top: 48%
+    }
+
+    100% {
+        top: 48%
+    }
+}
+
+@keyframes addcart {
+
+    0%,
+    30% {
+        opacity: 1
+    }
+
+    30%,
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes added {
+
+    0%,
+    80% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes color {
+    0% {
+        background-color: blue
+    }
+
+    80%,
+    100% {
+        background-color: green
+    }
+}
+/* Add to Cart Animation CSS */
+
+/* Product Card CSS */
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 100%;  
+    margin-bottom: 100px;         
+}
+
+.products-item-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;  
+    max-width: 100%; 
+    background-color: #f0f0f0;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item-card a {
+    display: inline-block; /* or block */
+}
+
+.product-item-card {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+/* Product Card */
+.product-card-container {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Product Image */
+.product-item-img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.product-item-img:hover {
+    opacity: 0.7;
+}
+
+/* Divider (Line) */
+.divider-product {
+    width: 80%;
+    height: 1px;
+    background-color: #161616;
+    margin: 5px 0;
+}
+
+/* Product Title */
+.product-item-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Product Specifications */
+.product-item-specs {
+    text-align: left;
+    padding: 0;
+    font-size: 12px;
+    color: #666;
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.product-price-section {
+    display: flex;
+    justify-content: start; 
+}
+
+.price-card-section {
+    display: flex;  
+    gap: 10px;      
+}
+
+.old-product-price {
+    text-decoration: line-through;  
+    color: #a0a0a0;
+    font-size: 13px;  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.new-product-price {
+    font-weight: bold;
+    font-size: 15px;  
+    color: #ff0000; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    /* Optional: makes the new price red */
+}
+
+.product-item-btn {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.product-item-info{
+    padding: 8px 13px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 30%;
+}
+
+.product-item-info {
+    background-color: #eee;
+    color: #333;
+}
+
+.product-item-info:hover {
+    background-color: #e2e2e2;
+}
+
+@media (max-width: 768px) {
+    .product-card-container {
+        width: 100%;
+    }
+}
+/* Product Card CSS */
+
+/* Footer Section CSS */
+.footer-main {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 14px;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #bbb;
+    transition: color 0.3s;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-social-newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media span {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.social-media ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    margin-right: 15px;
+}
+
+.social-media ul li a {
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: transform 0.3s;
+}
+
+.social-media ul li a:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: #ffffff;
+    color: #464646;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-bottom p {
+    margin-left: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a {
+    text-decoration: none;
+    color: #303030;
+    margin-right: 10px;
+    transition: color 0.3s;
+    margin-right: 100px;
+    font-size: 12px;
+}
+
+.footer-bottom-links a:hover {
+    color: #d00;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container,
+    .footer-social-newsletter,
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-links a {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+/* Footer Section CSS */

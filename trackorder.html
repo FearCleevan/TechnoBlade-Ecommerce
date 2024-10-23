@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY ORDER</title>
+    <link rel="icon" href="./1x/Asset 2.png" type="image/png">
+    <link rel="stylesheet" href="trackorder.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="main-header-container">
+        <div class="header">
+            <div class="logo">
+                <img src="./1x/Final-Logo-2.png" alt="">
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button type="submit" class="search-button">SEARCH</button>
+            </form>
+            <div class="icons">
+                <div class="icon-wrapper">
+                    <div class="notification-badge">3</div>
+                    <a href="trackorder.html"><i class="fas fa-truck icon" title="Track Your Order"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="notification-badge">5</div>
+                    <a href="Cart.html"><i class="fas fa-shopping-cart icon" title="Cart"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-user icon" title="User"></i>
+                    <i class="fas fa-caret-down icon"></i>
+
+                    <div class="user-dropdown">
+                        <a href="#">Log In / Sign Out</a>
+                        <a href="#">Purchase History</a>
+                        <a href="#">Account Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-header">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-hover"><a href="index.html" id="home-link">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="products-link">PRODUCTS</a>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Component <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        COMPONENT
+                                    </div>
+                                    <a href="./chassis.html">Chassis Fan</a>
+                                    <a href="./cpu.html">CPU Cooling</a>
+                                    <a href="./graphics.html">Graphics Card</a>
+                                    <a href="./ssd.html">Hard Disk Drive</a>
+                                    <a href="./ssd.html">Solid State Drive</a>
+                                    <a href="./ram.html">Ram</a>
+                                    <a href="./motherboard.html">Motherboard</a>
+                                    <a href="./pccase.html">PC Case</a>
+                                    <a href="./psu.html">Power Supply</a>
+                                    <a href="./intel.html">Processor AMD</a>
+                                    <a href="#">Processor Intel</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Peripherals <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PERIPHERALS
+                                    </div>
+                                    <a href="desktop-section.html">Headset</a>
+                                    <a href="#">Keyboard</a>
+                                    <a href="#">Mouse</a>
+                                    <a href="#">Monitor</a>
+                                    <a href="#">UPS & AVR</a>
+                                    <a href="#">Mouse Pad</a>
+                                    <a href="#">Web & Digital Camera</a>
+                                    <a href="#">Printer & Scanner</a>
+                                    <a href="#">Speaker</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Accessories <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        ACCESSORIES
+                                    </div>
+                                    <a href="desktop-section.html">Cables</a>
+                                    <a href="#">Earphones</a>
+                                    <a href="#">Power Bank</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">PC Furnitures <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PC FURNITURES
+                                    </div>
+                                    <a href="desktop-section.html">Gaming Chairs</a>
+                                    <a href="#">Office Chairs</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Lights & LED</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">OS & Softwares <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        OS & SOFTWARES
+                                    </div>
+                                    <a href="desktop-section.html">Antivirus</a>
+                                    <a href="#">Office Applications</a>
+                                    <a href="#">Operating System</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./desktop-section.html" id="desktops-link">DESKTOP</a>
+                        <div id="dropdown-content" class="desktop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Desktop <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        DESKTOP
+                                    </div>
+                                    <a href="./desktop-section.html">Gaming Build</a>
+                                    <a href="#">Productivity Build</a>
+                                    <a href="#">Home Use Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./laptop-section.html" id="laptops-link">LAPTOP</a>
+                        <div id="dropdown-content" class="laptop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Laptops<i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        LAPTOPS
+                                    </div>
+                                    <a href="./laptop-section.html">Gaming Laptops</a>
+                                    <a href="#">Productivity Laptops</a>
+                                    <a href="#">Chromebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="buildpc.html" id="build-link">BUILD A PC</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section -->
+
+    <!-- Bread Crumb Section -->
+    <div class="breadcrumb">
+        <a href="./index.html">HOME</a>
+        <span>&gt;</span>
+        <a href="#">TRACK YOUR ORDER</a>
+        <span>&gt;</span>
+        <a href="#">MY ORDER</a>
+    </div>
+    <!-- Bread Crumb Section -->
+
+    <!-- Track Order Section -->
+    <div class="order-tracking-container">
+        <h3>Billing Details</h3>
+
+        <div class="shipment-info" id="shipment-info">
+            <p><strong>Full Name:</strong> <span id="full-name"></span></p>
+            <p><strong>Shipment Address:</strong> <span id="shipment-address"></span></p>
+            <p><strong>Email Address:</strong> <span id="email-address"></span></p> <!-- Added ID for email -->
+            <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+            <p><strong>Status:</strong> <span class="order-status" id="order-status-1">Pending</span></p>
+            <a href="invoice.html" class="download-invoice" target="_blank">Download Invoice</a>
+        </div>
+        <h3>My Order</h3>
+        <div id="cart-items-container"></div>
+
+        <script>
+            function displayBillingDetails() {
+                // Get the billing details from localStorage
+                const billingDetails = JSON.parse(localStorage.getItem('billingDetails'));
+        
+                // Check if billing details exist
+                if (billingDetails) {
+                    // Populate the HTML elements with billing details
+                    document.getElementById('full-name').textContent = `${billingDetails.firstName} ${billingDetails.lastName}`;
+                    document.getElementById('shipment-address').textContent = `${billingDetails.address}, ${billingDetails.streetAddress}, ${billingDetails.city}, ${billingDetails.stateProvince}, ${billingDetails.zipCode}`;
+                    document.getElementById('email-address').textContent = billingDetails.email; // Populate email address
+                    document.getElementById('order-number').textContent = localStorage.getItem('orderTrackingNumber'); // Assuming you want to display the order tracking number here
+                } else {
+                    // If no billing details, you can hide or clear the shipment info
+                    document.getElementById('shipment-info').style.display = 'none'; // Hide if no details are found
+                }
+            }
+        
+            function displayCartItems() {
+                // Get the cart items from localStorage
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                const container = document.getElementById('cart-items-container');
+                let subtotal = 0;
+        
+                // Clear the container
+                container.innerHTML = '';
+        
+                // Check if there are no cart items
+                if (cartItems.length === 0) {
+                    container.innerHTML = '<p>No Orders</p>'; // Display "No Orders" message
+                    return; // Exit the function early
+                }
+        
+                // Loop through the cart items and create HTML for each item
+                cartItems.forEach(item => {
+                    const itemTotal = item.price * (item.quantity || 1); // Assuming a quantity property, default to 1
+                    subtotal += itemTotal;
+        
+                    const itemHTML = `
+                        <div class="order-details">
+                            <div class="product-info">
+                                <img src="${item.imageSrc}" alt="${item.title}">
+                                <div class="order-product-details">
+                                    <p><strong>Name:</strong> ${item.title}</p>
+                                    <p><strong>Price:</strong> &#8369;${item.price.toFixed(2)}</p>
+                                    <p><strong>Quantity:</strong> ${item.quantity || 1}</p> <!-- Display quantity if available -->
+                                    <p><strong>Total:</strong> &#8369;${itemTotal.toFixed(2)}</p> <!-- Display item total -->
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += itemHTML;
+                });
+        
+                // Calculate and display the subtotal and total in the summary
+                const total = subtotal; // If you need to add taxes or other fees, modify this
+                document.getElementById('subtotal-amount').textContent = subtotal.toFixed(2);
+                document.getElementById('total-amount').textContent = total.toFixed(2);
+            }
+        
+            // Call both functions to display billing details and cart items when the page loads
+            window.onload = function() {
+                displayBillingDetails();
+                displayCartItems();
+            };
+        </script>
+        
+            
+
+
+        <div class="order-progress-bar" id="progress-bar-1">
+            <div class="progress-step" id="step1-1">
+                <div class="icon"><i class="fas fa-times-circle"></i></div>
+                <p>Order Pending</p>
+            </div>
+            <div class="progress-step" id="step2-1">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <p>Order Confirmed</p>
+            </div>
+            <div class="progress-step" id="step3-1">
+                <div class="icon"><i class="fas fa-truck"></i></div>
+                <p>On the way</p>
+            </div>
+            <div class="progress-step" id="step4-1">
+                <div class="icon"><i class="fas fa-home"></i></div>
+                <p>Delivered</p>
+            </div>
+        </div>
+
+        <!-- Subtotal and Total Section -->
+        <div class="order-summary">
+            <div class="summary-details">
+                <p><strong>Subtotal:</strong> &#8369;<span id="subtotal-amount">0.00</span></p>
+                <p><strong>Total:</strong> &#8369;<span id="total-amount">0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Track Order Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>TECHNO STORE</h4>
+                <ul>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Desktops</a></li>
+                    <li><a href="#">Monitors</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Gaming Gears</a></li>
+                    <li><a href="#">Components</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                    <li><a href="#">Service & Support</a></li>
+                    <li><a href="#">Drivers & Software</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Gaming Teams</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Company Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-newsletter">
+            <div class="social-media">
+                <span>Follow us</span>
+                <ul>
+                    <li><a title="link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TechnoBuild. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">United States / English</a>
+        </div>
+    </div>
+    <!-- Footer Section -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simulate order statuses coming from the backend or database
+            const orders = [
+                { status: 'Pending', stepPrefix: '1' }, // First order
+                { status: 'Delivered', stepPrefix: '2' } // Second order
+            ];
+
+            orders.forEach(order => {
+                const orderStatus = order.status;
+                const stepPrefix = order.stepPrefix;
+
+                // Update status text dynamically
+                document.getElementById(`order-status-${stepPrefix}`).textContent = orderStatus;
+
+                // Update progress bar based on the order status
+                updateProgressBar(orderStatus, stepPrefix);
+            });
+        });
+
+        function updateProgressBar(status, stepPrefix) {
+            const step1 = document.getElementById(`step1-${stepPrefix}`);
+            const step2 = document.getElementById(`step2-${stepPrefix}`);
+            const step3 = document.getElementById(`step3-${stepPrefix}`);
+            const step4 = document.getElementById(`step4-${stepPrefix}`);
+
+            if (status === 'Pending') {
+                step1.classList.add('active');
+            } else if (status === 'Confirmed') {
+                step1.classList.add('completed');
+                step2.classList.add('active');
+            } else if (status === 'On the way') {
+                step1.classList.add('completed');
+                step2.classList.add('completed');
+                step3.classList.add('active');
+            } else if (status === 'Delivered') {
+                step1.classList.add('completed');
+                step2.classList.add('completed');
+                step3.classList.add('completed');
+                step4.classList.add('active');
+            }
+
+            // Update the progress bar line colors between steps
+            updateProgressBarLine(status, stepPrefix);
+        }
+
+        function updateProgressBarLine(status, stepPrefix) {
+            const progressBar = document.getElementById(`progress-bar-${stepPrefix}`);
+            const progressLine = progressBar.querySelector('div.order-progress-bar::before');
+            const width = (status === 'Pending' ? '13%' :
+                status === 'Confirmed' ? '38%' :
+                    status === 'On the way' ? '63%' :
+                        '100%');
+            progressBar.style.setProperty('--progress-width', width);
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/aa459d6567.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

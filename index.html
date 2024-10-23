@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEACHNOBUILD</title>
+    <link rel="icon" href="./1x/Asset 2.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Login / Registration Section -->
+    <div id="modalBackdrop" class="modal-backdrop" onclick="closeModal()"></div>
+    <div id="loginModal" class="form-container">
+        <div class="form-modal-container">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <!-- Tabs for switching between Login, Register, and Change Password -->
+            <div class="tabs">
+                <button id="login-tab" class="active" onclick="showLogin()">Login</button>
+                <button id="register-tab" onclick="showRegister()">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="form-content active">
+                <h3 class="welcome">Welcome back! Sign in to your account</h3>
+                <form id="loginForm">
+                    <input type="email" id="login-email" name="email" required placeholder="Email Address...">
+                    <input type="password" id="login-password" name="password" required placeholder="Password...">
+
+                    <a href="#">Forgotten Password?</a>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+
+                <script>
+                    const form = document.getElementById('loginForm');
+
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault(); // Prevent the default form submission
+
+                        // Perform any validation or processing here
+                        // If everything is valid, redirect to checkout.html
+                        window.location.href = './checkout.html';
+                    });
+                </script>
+                <p><a href="#">Return to Store</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="form-content">
+                <h3>Create your own Account</h3>
+                <form action="./buildpc.html" method="POST">
+                    <!-- First Name and Last Name -->
+                    <div class="form-row">
+                        <input type="text" id="first-name" name="first_name" required placeholder="First Name...">
+                        <input type="text" id="last-name" name="last_name" required placeholder="Last Name...">
+                    </div>
+
+                    <input type="email" id="register-email" name="email" required placeholder="Email Address...">
+
+                    <!-- City and ZIP Code -->
+                    <div class="form-row">
+                        <select title="city" id="city" name="city" required>
+                            <option value="" disabled selected>Select a City...</option>
+                            <option value="city1">City 1</option>
+                            <option value="city2">City 2</option>
+                            <option value="city3">City 3</option>
+                        </select>
+                        <input type="text" id="zip-code" name="zip-code" required placeholder="ZIP Code...">
+                    </div>
+
+                    <select title="state" id="state-privince" name="state-privince" required>
+                        <option value="" disabled selected>Select a State / Province...</option>
+                        <option value="city1">City 1</option>
+                        <option value="city2">City 2</option>
+                        <option value="city3">City 3</option>
+                    </select>
+
+                    <div class="form-row">
+                        <input type="text" id="address" name="address" required placeholder="Address...">
+                        <input type="text" id="street-address" name="street-address" required
+                            placeholder="Street, House no. Village...">
+                    </div>
+
+                    <input type="text" id="phone-number" name="phone-number" required placeholder="Phone Number...">
+
+                    <!-- Password and Confirm Password -->
+                    <div class="form-row">
+                        <input type="password" id="register-password" name="password" required
+                            placeholder="Password...">
+                        <input type="password" id="confirm-password" name="confirm_password" required
+                            placeholder="Password Confirmation...">
+                    </div>
+
+                    <label class="newsletter-label">
+                        <input type="checkbox" name="newsletter" class="subscribe"> Subscribe to our newsletter
+                    </label>
+
+                    <button type="submit" class="btn">Create Account</button>
+                </form>
+
+                <p>By clicking 'Create account', I hereby agree to and accept the following terms and conditions and
+                    certify that all information provided is accurate.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Login / Registration Section -->`
+
+    <!-- Header Section -->
+    <header class="main-header-container">
+        <div class="header">
+            <div class="logo">
+                <img src="./1x/Final-Logo-2.png" alt="">
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button type="submit" class="search-button">SEARCH</button>
+            </form>
+            <div class="icons">
+                <div class="icon-wrapper">
+                    <div class="notification-badge">3</div>
+                    <a href="trackyourorder.html"><i class="fas fa-truck icon" title="Track Your Order"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <div class="notification-badge" id="cart-notification">0</div>
+                    <a href="cart.html"><i class="fas fa-shopping-cart icon" title="Cart"></i></a>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fas fa-user icon" title="User"></i>
+                    <i class="fas fa-caret-down icon"></i>
+
+                    <div class="user-dropdown">
+                        <a href="#">Log In / Sign Out</a>
+                        <a href="#">Purchase History</a>
+                        <a href="#">Account Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-header">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-hover"><a href="#" class="active">HOME</a></li>
+                    <li class="dropdown">
+                        <a href="./chassis.html" id="products-link">PRODUCTS</a>
+                        <div id="dropdown-content" class="dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Component <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        COMPONENT
+                                    </div>
+                                    <a href="./chassis.html">Chassis Fan</a>
+                                    <a href="./cpu.html">CPU Cooling</a>
+                                    <a href="./graphics.html">Graphics Card</a>
+                                    <a href="./ssd.html">Hard Disk Drive</a>
+                                    <a href="./ssd.html">Solid State Drive</a>
+                                    <a href="./ram.html">Ram</a>
+                                    <a href="./motherboard.html">Motherboard</a>
+                                    <a href="./pccase.html">PC Case</a>
+                                    <a href="./psu.html">Power Supply</a>
+                                    <a href="./intel.html">Processor AMD</a>
+                                    <a href="#">Processor Intel</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Peripherals <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PERIPHERALS
+                                    </div>
+                                    <a href="desktop-section.html">Headset</a>
+                                    <a href="#">Keyboard</a>
+                                    <a href="#">Mouse</a>
+                                    <a href="#">Monitor</a>
+                                    <a href="#">UPS & AVR</a>
+                                    <a href="#">Mouse Pad</a>
+                                    <a href="#">Web & Digital Camera</a>
+                                    <a href="#">Printer & Scanner</a>
+                                    <a href="#">Speaker</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Accessories <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        ACCESSORIES
+                                    </div>
+                                    <a href="desktop-section.html">Cables</a>
+                                    <a href="#">Earphones</a>
+                                    <a href="#">Power Bank</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">PC Furnitures <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        PC FURNITURES
+                                    </div>
+                                    <a href="desktop-section.html">Gaming Chairs</a>
+                                    <a href="#">Office Chairs</a>
+                                    <a href="#">Tables</a>
+                                    <a href="#">Lights & LED</a>
+                                </div>
+                            </div>
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">OS & Softwares <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        OS & SOFTWARES
+                                    </div>
+                                    <a href="desktop-section.html">Antivirus</a>
+                                    <a href="#">Office Applications</a>
+                                    <a href="#">Operating System</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" id="desktops-link">DESKTOP</a>
+                        <div id="dropdown-content" class="desktop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="#" class="submenu">Desktop <i class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        DESKTOP
+                                    </div>
+                                    <a href="desktop-section.html">Gaming Build</a>
+                                    <a href="#">Productivity Build</a>
+                                    <a href="#">Home Use Build</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="./laptop-section.html" id="laptops-link">LAPTOP</a>
+                        <div id="dropdown-content" class="laptop-dropdown-content">
+                            <div class="submenu-wrapper">
+                                <a href="./laptop-section.html" class="submenu">Laptop<i
+                                        class="fa fa-caret-right"></i></a>
+                                <div class="submenu-content">
+                                    <div class="submenu-content-title">
+                                        LAPTOPS
+                                    </div>
+                                    <a href="./laptop-section.html">Gaming Laptops</a>
+                                    <a href="#">Productivity Laptops</a>
+                                    <a href="#">Chromebook</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="buildpc.html" id="build-link">BUILD A PC</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section -->
+
+    
+
+
+    <script>
+        // Function to show the modal and backdrop
+        function showModal() {
+            if (!sessionStorage.getItem('modalShown')) {
+                document.getElementById('loginModal').style.display = 'block';
+                document.getElementById('modalBackdrop').style.display = 'block'; // Show the backdrop
+                sessionStorage.setItem('modalShown', 'true');
+            }
+        }
+
+        // Function to close the modal and backdrop
+        function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+            document.getElementById('modalBackdrop').style.display = 'none'; // Hide the backdrop
+        }
+
+        // Show the login form
+        function showLogin() {
+            document.getElementById('login-form').classList.add('active');
+            document.getElementById('register-form').classList.remove('active');
+            document.getElementById('login-tab').classList.add('active');
+            document.getElementById('register-tab').classList.remove('active');
+        }
+
+        // Show the registration form
+        function showRegister() {
+            document.getElementById('register-form').classList.add('active');
+            document.getElementById('login-form').classList.remove('active');
+            document.getElementById('register-tab').classList.add('active');
+            document.getElementById('login-tab').classList.remove('active');
+        }
+
+        // When the user clicks outside the modal, close it
+        window.onclick = function (event) {
+            const modal = document.getElementById('loginModal');
+            const backdrop = document.getElementById('modalBackdrop');
+            if (event.target == modal || event.target == backdrop) {
+                closeModal();
+            }
+        }
+
+        // Trigger the modal to show on page load if not shown before
+        window.onload = function () {
+            showModal();
+        };
+
+
+    </script>
+
+    <!-- Banner Section -->
+    <div class="banner-container">
+        <div class="banner fade">
+            <img alt="TechnoBuild Banner" src="./product-images/power house.png" />
+        </div>
+
+        <div class="banner fade">
+            <img alt="TechnoBuild Banner" src="./product-images/slider-2.png" />
+        </div>
+
+        <div class="banner fade">
+            <img alt="TechnoBuild Banner" src="./product-images/slider-3.png" />
+        </div>
+
+        <a class="prev-slider" onclick="plusSlides(-1)">❮</a>
+        <a class="next-slider" onclick="plusSlides(1)">❯</a>
+    </div>
+    <!-- Banner Section -->
+
+    <!-- Product Explore Section -->
+    <div class="product-explore">
+        EXPLORE <span id="products-2"> PRODUCTS</span>
+    </div>
+    <div class="categories">
+        <div class="category">
+            <a href="./intel.html">
+                <img alt="Processor"
+                src="https://1.bp.blogspot.com/_Svwa4PMZAQc/TPQKgDqWxyI/AAAAAAAAAIA/NEjU1L_B5i8/s1600/processor3.jpg" />
+            </a>
+            <p>
+                PROCESSOR
+            </p>
+        </div>
+        <div class="category">
+            <a href="./motherboard.html">
+                <img alt="Motherboard" src="./product-images/MOTHERBOARD.png" />
+            </a>
+            <p>
+                MOTHERBOARD
+            </p>
+        </div>
+        <div class="category">
+            <a href="./graphics.html">
+                <img alt="Graphics Card" src="./product-images/GRAPHICS CARD.png" />
+            </a>
+            <p>
+                GRAPHICS CARD
+            </p>
+        </div>
+        <div class="category">
+            <a href="./ram.html">
+                <img alt="Memory" src="https://asset.conrad.com/media10/isa/160267/c1/-/fr/1488711_RB_00_FB/image.jpg" />
+            </a>
+            <p>
+                MEMORY
+            </p>
+        </div>
+        <div class="category">
+            <a href="./ssd.html">
+                <img alt="Solid State Drives"
+                src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6338/6338995cv12d.jpg" />
+            </a>
+            <p>
+                SSD
+            </p>
+        </div>
+        <div class="category">
+            <a href="./psu.html">
+                <img alt="Power Supply" src="./product-images/POWER SUPPLY.png" />
+            </a>
+            <p>
+                POWER SUPPLY
+            </p>
+        </div>
+        <div class="category">
+            <a href="pccase.html">
+                <img alt="PC Case" src="./product-images/PC CASE.png" />
+            </a>
+            <p>
+                PC CASE
+            </p>
+        </div>
+        <div class="category">
+            <a href="./laptop-section.html">
+                <img alt="Laptops" src="./product-images/LAPTOP.png" />
+            </a>
+            <p>
+                LAPTOPS
+            </p>
+        </div>
+        <div class="category">
+            <a href="./cpu.html">
+                <img alt="Laptops" src="./product-images/CPU COOLER.png" />
+            </a>
+            <p>
+                CPU COOLER
+            </p>
+        </div>
+        <div class="category">
+            <a href="./desktop-section.html">
+                <img alt="Laptops" src="./product-images/DESKTOP.png" />
+            </a>
+            <p>
+                DESKTOPS
+            </p>
+        </div>
+    </div>
+
+    <!-- Official Section -->
+    <div class="official-container">
+        <div class="official-banner">
+            <img alt="Official Banner" src="./product-images/official partner.png" />
+        </div>
+    </div>
+    <!-- Official Section -->
+
+    <!-- Product Section -->
+    <div class="parent-container">
+        <div class="products-item-container">
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/DESKTOPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Vision Elite RS 14NUI9-679US Gaming Desktop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Pro</li>
+                    <li>Intel Core™ i9-14900KF 3.2 GHz</li>
+                    <li>NVIDIA® GeForce RTX™ 4090 GAMING TRIO 24G</li>
+                    <li>64GB (32GBx2) 5600 MHz DDR5 RAM</li>
+                    <li>2TB M.2 NVMe SSD...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;245,999.00</p>
+                        <p class="new-product-price">&#8369;234,557.00</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">BUY NOW</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <a href="overview.html"><img src="./product-images/DESKTOP5.png" alt="Laptop Image"
+                            class="product-item-img"></a>
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Vision Elite RS 14NUG9-831US Gaming Desktop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Pro</li>
+                    <li>Intel Core™ i9-14900KF 3.2 GHz</li>
+                    <li>NVIDIA® GeForce RTX 4080 SUPER (Vertical)</li>
+                    <li>32GB (2 x 16GB) DDR5 6000 RGB</li>
+                    <li>2TB M.2 NVMe SSD...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;223,115.00</p>
+                        <p class="new-product-price">&#8369;171,570.00</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">BUY NOW</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/DESKTOPPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Infinite RS 14NUI9-678US Gaming Desktop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Pro</li>
+                    <li>Intel Core™ i9-14900KF 3.2 GHz</li>
+                    <li>NVIDIA® GeForce RTX™ 4090 GAMING 24G</li>
+                    <li>32GB (16GBx2) 5600 MHz DDR5 RAM</li>
+                    <li>2TB M.2 NVMe SSD...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;212,818.00</p>
+                        <p class="new-product-price">&#8369;189,877.00</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">BUY NOW</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/DESKTOPPPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Aegis R2 A14NUE7-805US Gaming Desktop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Home</li>
+                    <li>Intel® Core™ i7-14700F 2.1 GHz</li>
+                    <li>NVIDIA® GeForce RTX™ 4070 SUPER 12GB GDDR6X</li>
+                    <li>32GB DDR5 5600 (2x 16GB)</li>
+                    <li>2TB M.2 NVMe SSD...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;109,841.00</p>
+                        <p class="new-product-price">&#8369;102,919.00</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">BUY NOW</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/LAPTOP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Stealth 14Studio A13VE-202US 14" FHD Gaming Laptop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Home
+                        (MSI recommends Windows 11 Pro for business.)</li>
+                    <li>Intel® Core™i7-13620H 2.4 - 4.9 GHz</li>
+                    <li>14" FHD+ IPS-Level Panel 165Hz</li>
+                    <li>6G GDDR6 NVIDIA® GeForce RTX™ 4050</li>
+                    <li>16GB (8GB*2) DDR5 5200MHz...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;98,203.23</p>
+                        <p class="new-product-price">&#8369;92,462.89</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">INFO</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/LAPTOPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Crosshair 16 HX Monster Hunter Edition QHD
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Home
+                        (MSI recommends Windows 11 Pro for business.)</li>
+                    <li>Intel® Core™ i7-14700HX 1.5GHz</li>
+                    <li>16" QHD+ Wide View Angle 240Hz Thin Bezel 100% DCI-P3</li>
+                    <li>NVIDIA® GeForce RTX™ 4060 Laptop...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;106,246.26</p>
+                        <p class="new-product-price">&#8369;100,503.19</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">INFO</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/LAPTOPPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Sword 15 A12UGS-698 15.6" FHD Gaming Laptop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Home
+                        (MSI recommends Windows 11 Pro for business.)</li>
+                    <li>Intel® Core™ i7-12650H 1.7GHz</li>
+                    <li>15.6" FHD, IPS-Level 144Hz 45% NTSC</li>
+                    <li>NVIDIA GeForce® RTX™ 3070 Ti Laptop GPU 8G GDDR6...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;51,790.25</p>
+                        <p class="new-product-price">&#8369;54,546.30</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">INFO</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card-container">
+                <div class="product-item-card">
+                    <img src="./product-images/LAPTOPPPP1.png" alt="" class="product-item-img">
+                </div>
+                <div class="divider-product"></div>
+                <h2 class="product-item-title">
+                    Cyborg 14 A13UCX-095US 14" FHD Gaming Laptop
+                </h2>
+                <div class="divider-product"></div>
+                <ul class="product-item-specs">
+                    <li>Windows 11 Pro</li>
+                    <li>Intel® Core™ i7-12700H 1.7GHz</li>
+                    <li>14" 16:10 FHD+ IPS-Level Panel 144Hz 100% sRGB</li>
+                    <li>16GB (8Gx2) DDR5 5600MHz</li>
+                    <li>512GB NVMe SSD...</li>
+                </ul>
+                <div class="product-price-section">
+                    <div class="price-card-section">
+                        <p class="old-product-price">&#8369;31,011.17</p>
+                        <p class="new-product-price">&#8369;34,456.92</p>
+                    </div>
+                </div>
+                <div class="divider-product"></div>
+                <div class="product-item-btn">
+                    <button title="view-info" class="product-item-info">INFO</button>
+                    <button class="cart-button"> <span class="add-to-cart">ADD TO CART</span> <span class="added">ITEM
+                            ADDED</span> <i class="fa fa-plus"></i> <i class="fa fa-circle-thin"></i> <i
+                            class="fa fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>TECHNO STORE</h4>
+                <ul>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Desktops</a></li>
+                    <li><a href="#">Monitors</a></li>
+                    <li><a href="#">Graphic Cards</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Gaming Gears</a></li>
+                    <li><a href="#">Components</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>SUPPORT</h4>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Information</a></li>
+                    <li><a href="#">Warranty Information</a></li>
+                    <li><a href="#">Service & Support</a></li>
+                    <li><a href="#">Drivers & Software</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Gaming Teams</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li><a href="#">Company Info</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-social-newsletter">
+            <div class="social-media">
+                <span>Follow us</span>
+                <ul>
+                    <li><a title="link" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a title="link" href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TechnoBuild. All rights reserved.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">United States / English</a>
+        </div>
+    </div>
+    <!-- Footer Section -->
+
+    <!-- JavaScript -->
+    <!-- Banner Slider -->
+    <script>
+        let currentIndex = 0;
+        const categories = document.querySelectorAll('.category');
+        const totalCategories = categories.length;
+
+        function showSlide(index) {
+            categories.forEach((category, i) => {
+                category.style.display = (i >= index && i < index + 10) ? 'block' : 'none';
+            });
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex < totalCategories - 6) ? currentIndex + 1 : totalCategories - 6;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("banner");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-slider", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-slider";
+        }
+
+    </script>
+    <!-- Banner Slider -->
+
+    <script src="./cart.js"></script>
+
+    <!-- Add to Cart JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            const cartButtons = document.querySelectorAll(".cart-button");
+
+            cartButtons.forEach((button) => {
+                button.addEventListener("click", cartClick);
+            });
+
+            function cartClick() {
+                let button = this;
+                button.classList.add("clicked");
+            }
+        });
+
+    </script>
+    <!-- Add to Cart JS -->
+    <script src="https://kit.fontawesome.com/aa459d6567.js" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+
+</body>
+
+</html>

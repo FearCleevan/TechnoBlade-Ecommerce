@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.ratings-reviews {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.ratings-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.rating-snapshot,
+.average-rating {
+  width: 45%;
+}
+
+.rating-snapshot h3,
+.average-rating h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: #eee;
+  width: 60%;
+  height: 8px;
+  margin: 0 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ccc;
+  width: 0; /* Initial width for demo, should be dynamic */
+}
+
+.stars {
+  font-size: 18px;
+  color: #ccc; /* Placeholder for stars */
+}
+
+.count {
+  font-size: 14px;
+  color: #555;
+}
+
+.no-reviews p {
+  margin-top: 20px;
+  color: #777;
+  font-size: 14px;
+  font-style: italic;
+}
+
+li span {
+  min-width: 70px;
+  text-align: left;
+}
